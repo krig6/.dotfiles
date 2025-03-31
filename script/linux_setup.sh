@@ -21,6 +21,8 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/downl
 tar -xzf lazygit.tar.gz lazygit
 sudo mv lazygit /usr/local/bin/
 rm lazygit.tar.gz
+#Running LazyGit to generate the configuration file automatically
+lazygit
 
 # Install Alacritty
 echo "Installing Alacritty..."
