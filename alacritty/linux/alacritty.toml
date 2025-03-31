@@ -40,7 +40,3 @@ TERM = "xterm-256color"
 [scrolling]
 history = 2000
 
-# Sets WSL as the default shell for Alacritty
-[terminal]
-shell = { program = "wsl.exe" }
-

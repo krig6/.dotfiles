@@ -17,6 +17,16 @@ rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim/
 rm -rf ~/.local/state/nvim/
 
+# Remove LazyGit binary from /usr/local/bin/
+sudo rm -rf /usr/local/bin/lazygit
+# Remove the downloaded tarball
+rm lazygit.tar.gz
+# Remove LazyGit configuration and data directories
+rm -rf ~/.config/jesseduffield
+rm -rf ~/.config/lazygit
+rm -rf ~/.lazygit
+rm -rf ~/.local/state/lazygit
+
 # Remove Alacritty config (if applicable)
 echo "Removing Alacritty configuration..."
 rm -rf /mnt/c/Users/$PC_USERNAME/AppData/Roaming/alacritty
