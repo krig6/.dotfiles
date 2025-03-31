@@ -1,0 +1,47 @@
+[general]
+import = [
+  "tokyonight_night.toml",
+  # "gruvbox.toml",
+  # "tokyonight_day.toml",
+  # "solarized_osaka.toml"
+  "keybindings.toml"
+]
+
+live_config_reload = true
+
+[font]
+# Install these fonts
+normal = { family = "Hack Nerd Font", style = "Regular" } 
+italic = { family = "CaskaydiaCove Nerd Font", style = "Italic" }
+size = 13
+
+[font.offset]
+y = 3
+
+[font.glyph_offset]
+y = 3
+
+[window]
+startup_mode = "Windowed" # Maximized, Fullscreen
+decorations = "None" # Full
+dimensions = { columns = 150, lines = 40}
+position = {x = 220, y = 60}
+dynamic_padding = false
+opacity = 1
+
+[cursor]
+unfocused_hollow = true
+
+[cursor.style]
+blinking = "Never"
+
+[env]
+TERM = "xterm-256color"
+
+[scrolling]
+history = 2000
+
+# Sets WSL as the default shell for Alacritty
+[terminal]
+shell = { program = "wsl.exe" }
+

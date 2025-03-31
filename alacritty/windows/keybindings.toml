@@ -1,0 +1,5 @@
+[keyboard]
+bindings = [
+ { key = "Q", mods = "Control", command = { program = "wsl.exe", args = ["bash", "-c", "~/.tmux_startup.sh"] } },
+ { key = "V", mods = "Control", action = "Paste" },
+]

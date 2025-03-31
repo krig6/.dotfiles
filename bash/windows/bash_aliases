@@ -1,0 +1,70 @@
+#project
+alias odin='cd ~/odin-restaurant && nv .' #open project with neovim
+alias proj='cd ~/odin-restaurant'         #cd to project
+
+#dotfiles
+alias dt='nv ~/.dotfiles'
+
+#alacritty
+alias ala='alacritty'
+alias ac='nv "/mnt/c/Users/$PC_USERNAME/AppData/Roaming/alacritty/alacritty.toml"' #open alacritty config file
+alias ak='nv "/mnt/c/Users/$PC_USERNAME/AppData/Roaming/alacritty/keybindings.toml"'  #open alacritty keybindings
+
+# neovim
+alias nv='nvim'
+alias nc='nv ~/.config/nvim/'                          #open neovim config
+alias color='nv ~/.config/nvim/lua/plugins/colorscheme.lua' #change neovim colorscheme
+
+#bash
+alias ali='nv .bash_aliases'    #open bash shortcuts
+alias ar='source .bash_aliases' #refresh bash shortcuts
+alias bsh='nv ~/.bashrc'        #open bash
+alias br='source ~/.bashrc'     #refresh bash
+
+#tmux
+alias tm='tmux'
+alias tc='nv ~/.tmux.conf'             #open tmux config
+alias ts='nv ~/.tmux_startup.sh'         #open script
+alias tr='tmux source-file ~/.tmux.conf' #refresh tmux config
+alias tk='tm kill-session' #tmux kill-session
+alias ta='tm a' #attach to tmux session
+alias tl='tm ls' #list tmux sessions
+
+# wsl
+alias update='sudo apt-get update && sudo apt-get upgrade'
+alias h='cd ~'
+alias c='clear'
+alias e='exit'
+
+# git
+alias gs='git status'
+alias ga='git add'
+alias gca='git commit --amend --no-edit'
+alias gp='git push'
+alias gpl='git pull'
+alias gco='git checkout'
+alias gb='git branch'
+alias gcm='git checkout main'
+alias gl='git log'
+alias glog='git log --oneline --graph --decorate'
+alias gd='git diff'
+alias gh-create='gh repo create --private --source=. --remote=origin && git push -u --all && gh browse'
+alias gcount='git rev-list --count HEAD'
+
+# npm
+alias build='npm run build'   # Shortcut for npm build
+alias dev='npm run dev'       # Shortcut for npm dev
+alias lint='npm run lint'     # Shortcut for npm lint
+alias deploy='npm run deploy' # Shortcut for npm deploy
+alias install='npm install'   # Install dependencies
+alias nu='npm update'         # Update dependencies
+alias nug='npm update -g'     # Update global dependencies
+alias np='npm publish'        # Publish package
+
+# changing directory
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
