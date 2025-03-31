@@ -14,6 +14,8 @@ sudo apt clean
 echo "Removing Neovim..."
 sudo rm -rf /opt/nvim
 rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim/
+rm -rf ~/.local/state/nvim/
 
 # Remove Alacritty
 echo "Removing Alacritty..."
