@@ -32,6 +32,7 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar -xzf lazygit.tar.gz lazygit
 sudo mv lazygit /usr/local/bin/
+rm lazygit.tar.gz
 
 # Create symlinks for configurations
 echo "Creating symlinks..."
@@ -56,4 +57,8 @@ echo "Installing TPM..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Prompt to install Tmux plugins
-echo "Setup complete! Open tmux and press Prefix + I to install plugins."
+echo "Open tmux and press Prefix + I to install plugins."
+
+# Prompt to refresh source and apply changes
+echo "Setup complete!"
+echo "To apply the changes, run: source ~/.bashrc or restart your terminal."
