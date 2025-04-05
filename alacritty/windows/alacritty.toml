@@ -1,7 +1,7 @@
 [general]
 import = [
-  "tokyonight_night.toml",
-  # "gruvbox.toml",
+   "gruvbox.toml",
+  # "tokyonight_night.toml",
   # "tokyonight_day.toml",
   # "solarized_osaka.toml"
   "keybindings.toml"
@@ -10,9 +10,9 @@ import = [
 live_config_reload = true
 
 [font]
-# Install these fonts
-normal = { family = "Hack Nerd Font", style = "Regular" } 
-italic = { family = "CaskaydiaCove Nerd Font", style = "Italic" }
+normal = { family = "Hack Nerd Font", style = "Regular" }
+# normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+# normal = { family = "FiraCode Nerd Font", style = "Regular" }
 size = 13
 
 [font.offset]

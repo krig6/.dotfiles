@@ -1,6 +1,6 @@
 import = [
-  "~/.config/alacritty/tokyonight_night.toml",
-  # "~/.config/alacritty/gruvbox.toml",
+   "~/.config/alacritty/gruvbox.toml",
+  # "~/.config/alacritty/tokyonight_night.toml",
   # "~/.config/alacritty/tokyonight_day.toml",
   # "~/.config/alacritty/solarized_osaka.toml"
   "~/.config/alacritty/keybindings.toml"
@@ -9,9 +9,9 @@ import = [
 live_config_reload = true
 
 [font]
-# Install these fonts
-normal = { family = "Hack Nerd Font", style = "Regular" } 
-italic = { family = "CaskaydiaCove Nerd Font", style = "Italic" }
+normal = { family = "Hack Nerd Font", style = "Regular" }
+# normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+# normal = { family = "FiraCode Nerd Font", style = "Regular" }
 size = 13
 
 [font.offset]
@@ -21,10 +21,10 @@ y = 3
 y = 3
 
 [window]
-startup_mode = "Maximized" # Maximized, Fullscreen
-decorations = "None" # Full
+startup_mode = "Windowed" # Maximized, Fullscreen
+decorations = "Full" # Full
 dimensions = { columns = 150, lines = 40}
-# position = {x = 220, y = 60}
+position = {x = 220, y = 55}
 dynamic_padding = false
 opacity = 1
 

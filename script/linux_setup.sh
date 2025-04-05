@@ -37,6 +37,12 @@ ln -sfn ~/.dotfiles/nvim ~/.config/nvim
 ln -sfn ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sfn ~/.dotfiles/tmux/tmux_startup.sh ~/.tmux_startup.sh
 
+# Link fonts
+echo "Linking fonts..."
+mkdir -p ~/.local/share/fonts/
+ln -sfn ~/.dotfiles/fonts/ ~/.local/share/fonts/custom
+fc-cache -fv
+
 # Making sure that tmux script is executable
 chmod +x ~/.tmux_startup.sh
 

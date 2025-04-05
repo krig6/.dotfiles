@@ -42,6 +42,12 @@ ln -sfn ~/.dotfiles/nvim ~/.config/nvim
 ln -sfn ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sfn ~/.dotfiles/tmux/tmux_startup.sh ~/.tmux_startup.sh
 
+# Link fonts
+echo "Linking fonts..."
+mkdir -p ~/.local/share/fonts/
+ln -sfn ~/.dotfiles/fonts/ ~/.local/share/fonts/custom
+fc-cache -fv
+
 # Save username to ~/.bashrc if not already present
 echo "Saving PC_USERNAME in bash config..."
 grep -qxF "export PC_USERNAME=\"$PC_USERNAME\"" ~/.bashrc || echo "export PC_USERNAME=\"$PC_USERNAME\"" >>~/.bashrc

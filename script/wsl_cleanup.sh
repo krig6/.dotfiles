@@ -36,6 +36,10 @@ echo "Removing Tmux"
 rm -rf ~/.tmux/plugins/tpm
 rm -rf ~/.tmux
 
+# Remove Fonts
+rm -rf ~/.local/share/fonts/custom
+fc-cache -fv
+
 # Remove dotfiles folder and symlink
 echo "Removing dotfiles and symlinks..."
 rm -rf ~/.dotfiles
