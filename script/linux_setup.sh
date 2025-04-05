@@ -5,7 +5,7 @@ set -e # Exit on error
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y xclip nodejs npm build-essential tmux curl
+sudo apt install -y xclip nodejs npm build-essential tmux curl polybar papirus-icon-theme
 
 # Install Neovim
 echo "Installing Neovim..."
@@ -51,6 +51,12 @@ fc-cache -fv
 #-Create symlink for Gruvbox-Dark GTK theme
 echo "Creating symlink for Gruvbox-Dark theme..."
 ln -sfn ~/.dotfiles/Gruvbox-Dark/ ~/.themes
+
+# Create symlink for Polybar
+echo "Creating symlink for Polybar"
+ln -sfn ~/.dotfiles/polybar ~/.config/polybar
+killall polybar
+polybar top &
 
 # Making sure that tmux script is executable
 chmod +x ~/.tmux_startup.sh
