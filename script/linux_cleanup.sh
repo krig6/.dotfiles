@@ -44,6 +44,9 @@ fc-cache -fv
 rm -rf ~/.Xmodmap
 xmodmap ~/.Xmodmap
 
+# Remove Gruvbox-Dark GTK theme
+rm -rf ~/.themes/Gruvbox-Dark/
+
 # Remove dotfiles folder and symlink
 echo "Removing dotfiles and symlinks..."
 rm -rf ~/.dotfiles

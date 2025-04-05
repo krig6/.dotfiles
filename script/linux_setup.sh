@@ -42,11 +42,15 @@ ln -sfn ~/.dotfiles/tmux/tmux_startup.sh ~/.tmux_startup.sh
 ln -sfn ~/.dotfiles/x11/.Xmodmap ~/.Xmodmap
 xmodmap ~/.Xmodmap
 
-# Link fonts
-echo "Linking fonts..."
+# Create symlink for fonts
+echo "Creating symlink for fonts..."
 mkdir -p ~/.local/share/fonts/
 ln -sfn ~/.dotfiles/fonts/ ~/.local/share/fonts/custom
 fc-cache -fv
+
+#-Create symlink for Gruvbox-Dark GTK theme
+echo "Creating symlink for Gruvbox-Dark theme..."
+ln -sfn ~/.dotfiles/Gruvbox-Dark/ ~/.themes
 
 # Making sure that tmux script is executable
 chmod +x ~/.tmux_startup.sh
