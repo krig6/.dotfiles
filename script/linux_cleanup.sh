@@ -40,6 +40,10 @@ rm -rf ~/.tmux
 rm -rf ~/.local/share/fonts/custom
 fc-cache -fv
 
+# Remove Xmodmap
+rm -rf ~/.Xmodmap
+xmodmap ~/.Xmodmap
+
 # Remove dotfiles folder and symlink
 echo "Removing dotfiles and symlinks..."
 rm -rf ~/.dotfiles

@@ -37,6 +37,11 @@ ln -sfn ~/.dotfiles/nvim ~/.config/nvim
 ln -sfn ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sfn ~/.dotfiles/tmux/tmux_startup.sh ~/.tmux_startup.sh
 
+# Create symlink for Xmodmap
+# This Xmodmap is used to swap Caps Lock and Escape key
+ln -sfn ~/.dotfiles/x11/.Xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap
+
 # Link fonts
 echo "Linking fonts..."
 mkdir -p ~/.local/share/fonts/
