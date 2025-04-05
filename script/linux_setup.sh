@@ -50,7 +50,7 @@ fc-cache -fv
 
 #-Create symlink for Gruvbox-Dark GTK theme
 echo "Creating symlink for Gruvbox-Dark theme..."
-ln -sfn ~/.dotfiles/Gruvbox-Dark/ ~/.themes
+ln -sfn ~/.dotfiles/Gruvbox-Dark/ ~/.themes/Gruvbox-Dark
 
 # Create symlink for Polybar
 echo "Creating symlink for Polybar"
