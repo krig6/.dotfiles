@@ -14,8 +14,8 @@ sudo apt clean
 echo "Removing Neovim..."
 sudo rm -rf /opt/nvim
 sudo rm -rf ~/.config/nvim
-sudo rm -rf ~/.local/share/nvim/
-sudo rm -rf ~/.local/state/nvim/
+sudo rm -rf ~/.local/share/nvim
+sudo rm -rf ~/.local/state/nvim
 
 # Remove LazyGit binary from /usr/local/bin/
 sudo rm -rf /usr/local/bin/lazygit

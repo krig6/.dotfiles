@@ -5,7 +5,7 @@ set -e # Exit on error
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme
+sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar
 
 # Install Neovim
 echo "Installing Neovim..."
@@ -13,7 +13,7 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x8
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 rm nvim-linux-x86_64.tar.gz
-mkdir -p ~/.config/
+mkdir -p ~/.config
 
 # Install Lazygit
 echo "Installing LazyGit"
@@ -44,19 +44,18 @@ xmodmap ~/.Xmodmap
 
 # Create symlink for fonts
 echo "Creating symlink for fonts..."
-mkdir -p ~/.local/share/fonts/
-ln -sfn ~/.dotfiles/fonts/ ~/.local/share/fonts/custom/
+mkdir -p ~/.local/share/fonts
+ln -sfn ~/.dotfiles/fonts ~/.local/share/fonts/custom
 fc-cache -fv
 
 #-Create symlink for Gruvbox-Dark GTK theme
 echo "Creating symlink for Gruvbox-Dark theme..."
-mkdir -p ~/.themes/Gruvbox-Dark/
-ln -sfn ~/.dotfiles/Gruvbox-Dark/ ~/.themes/Gruvbox-Dark/
+mkdir -p ~/.themes
+ln -sfn ~/.dotfiles/Gruvbox-Dark ~/.themes/Gruvbox-Dark
 
 # Create symlink for Polybar
 echo "Creating symlink for Polybar"
-ln -sfn ~/.dotfiles/polybar ~/.config/
-killall polybar
+ln -sfn ~/.dotfiles/polybar ~/.config/polybar
 sleep 10
 polybar top &
 

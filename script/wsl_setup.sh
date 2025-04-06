@@ -24,7 +24,7 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x8
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 rm nvim-linux-x86_64.tar.gz
-mkdir -p ~/.config/
+mkdir -p ~/.config
 
 # Install Lazygit
 echo "Installing LazyGit"
@@ -44,7 +44,7 @@ ln -sfn ~/.dotfiles/tmux/tmux_startup.sh ~/.tmux_startup.sh
 
 # Link fonts
 echo "Linking fonts..."
-mkdir -p ~/.local/share/fonts/
+mkdir -p ~/.local/share/fonts
 ln -sfn ~/.dotfiles/fonts/ ~/.local/share/fonts/custom
 fc-cache -fv
 
