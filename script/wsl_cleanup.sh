@@ -13,37 +13,35 @@ sudo apt clean
 # Remove Neovim
 echo "Removing Neovim..."
 sudo rm -rf /opt/nvim
-rm -rf ~/.config/nvim
-rm -rf ~/.local/share/nvim/
-rm -rf ~/.local/state/nvim/
+sudo rm -rf ~/.config/nvim
+sudo rm -rf ~/.local/share/nvim/
+sudo rm -rf ~/.local/state/nvim/
 
 # Remove LazyGit binary from /usr/local/bin/
 sudo rm -rf /usr/local/bin/lazygit
-# Remove the downloaded tarball
-rm lazygit.tar.gz
 # Remove LazyGit configuration and data directories
-rm -rf ~/.config/jesseduffield
-rm -rf ~/.config/lazygit
-rm -rf ~/.lazygit
-rm -rf ~/.local/state/lazygit
+sudo rm -rf ~/.config/jesseduffield
+sudo rm -rf ~/.config/lazygit
+sudo rm -rf ~/.lazygit
+sudo rm -rf ~/.local/state/lazygit
 
 # Remove Alacritty config (if applicable)
 echo "Removing Alacritty configuration..."
-rm -rf /mnt/c/Users/$PC_USERNAME/AppData/Roaming/alacritty
+sudo rm -rf /mnt/c/Users/$PC_USERNAME/AppData/Roaming/alacritty
 
 # Remove Tmux
 echo "Removing Tmux"
-rm -rf ~/.tmux/plugins/tpm
-rm -rf ~/.tmux
+sudo rm -rf ~/.tmux/plugins/tpm
+sudo rm -rf ~/.tmux
 
 # Remove Fonts
-rm -rf ~/.local/share/fonts/custom
+sudo rm -rf ~/.local/share/fonts/custom
 fc-cache -fv
 
 # Remove dotfiles folder and symlink
 echo "Removing dotfiles and symlinks..."
-rm -rf ~/.dotfiles
-rm -f ~/.bashrc ~/.bash_aliases
-rm -f ~/.tmux.conf ~/.tmux_startup.sh
+sudo rm -rf ~/.dotfiles
+sudo rm -f ~/.bashrc ~/.bash_aliases
+sudo rm -f ~/.tmux.conf ~/.tmux_startup.sh
 
 echo "Cleanup complete!"

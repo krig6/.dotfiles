@@ -45,17 +45,19 @@ xmodmap ~/.Xmodmap
 # Create symlink for fonts
 echo "Creating symlink for fonts..."
 mkdir -p ~/.local/share/fonts/
-ln -sfn ~/.dotfiles/fonts/ ~/.local/share/fonts/custom
+ln -sfn ~/.dotfiles/fonts/ ~/.local/share/fonts/custom/
 fc-cache -fv
 
 #-Create symlink for Gruvbox-Dark GTK theme
 echo "Creating symlink for Gruvbox-Dark theme..."
-ln -sfn ~/.dotfiles/Gruvbox-Dark/ ~/.themes/Gruvbox-Dark
+mkdir -p ~/.themes/Gruvbox-Dark/
+ln -sfn ~/.dotfiles/Gruvbox-Dark/ ~/.themes/Gruvbox-Dark/
 
 # Create symlink for Polybar
 echo "Creating symlink for Polybar"
 ln -sfn ~/.dotfiles/polybar ~/.config/
 killall polybar
+sleep 10
 polybar top &
 
 # Making sure that tmux script is executable
