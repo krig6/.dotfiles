@@ -23,7 +23,7 @@ y = 3
 [window]
 startup_mode = "Windowed" # Maximized, Fullscreen
 decorations = "Full" # Full
-dimensions = { columns = 150, lines = 40}
+dimensions = { columns = 150, lines = 37}
 position = {x = 220, y = 55}
 dynamic_padding = false
 opacity = 1

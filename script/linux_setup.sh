@@ -5,7 +5,7 @@ set -e # Exit on error
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y xclip nodejs npm build-essential tmux curl polybar papirus-icon-theme
+sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme
 
 # Install Neovim
 echo "Installing Neovim..."
@@ -54,7 +54,7 @@ ln -sfn ~/.dotfiles/Gruvbox-Dark/ ~/.themes/Gruvbox-Dark
 
 # Create symlink for Polybar
 echo "Creating symlink for Polybar"
-ln -sfn ~/.dotfiles/polybar ~/.config/polybar
+ln -sfn ~/.dotfiles/polybar ~/.config/
 killall polybar
 polybar top &
 
