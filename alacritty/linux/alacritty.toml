@@ -23,10 +23,10 @@ y = 3
 [window]
 startup_mode = "Windowed" # Maximized, Fullscreen
 decorations = "Full" # Full
-dimensions = { columns = 150, lines = 37}
+dimensions = { columns = 150, lines = 39}
 position = {x = 220, y = 55}
 dynamic_padding = false
-opacity = 0.9
+opacity = 0.8
 
 [cursor]
 unfocused_hollow = true
