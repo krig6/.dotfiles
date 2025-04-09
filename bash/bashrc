@@ -57,16 +57,37 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='$( \
+    branch=$(parse_git_branch); \
+    folder=$(basename "$PWD"); \
+    if [ "$PWD" == "$HOME" ]; then \
+      echo "\[\033[00m\]~ "; \
+    elif [ -n "$branch" ]; then \
+      echo "\[\033[00m\]~ $folder \[\033[38;5;217m\]($branch)\[\033[00m\] "; \
+    else \
+      echo "\[\033[00m\]~ $folder "; \
+    fi \
+  )'
 else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+  PS1='$( \
+    branch=$(parse_git_branch); \
+    folder=$(basename "$PWD"); \
+    if [ "$PWD" == "$HOME" ]; then \
+      echo "~ "; \
+    elif [ -n "$branch" ]; then \
+      echo "~ $folder ($branch) "; \
+    else \
+      echo "~ $folder "; \
+    fi \
+  )'
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm* | rxvt*)
-  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+  # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\w\a\]$PS1"
   ;;
 *) ;;
 esac
@@ -117,3 +138,7 @@ cd
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
+
+parse_git_branch() {
+  git rev-parse --abbrev-ref HEAD 2>/dev/null
+}
