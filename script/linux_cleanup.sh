@@ -6,7 +6,7 @@ echo "Cleaning up installed packages, configurations, and dotfiles..."
 
 # Uninstall packages
 echo "Removing installed packages..."
-sudo apt remove --purge -y xclip nodejs npm build-essential tmux curl papirus-icon-theme
+sudo apt remove --purge -y xclip nodejs npm build-essential tmux curl papirus-icon-theme eza
 sudo apt autoremove -y
 sudo apt clean
 echo "System packages removed."

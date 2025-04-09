@@ -5,7 +5,7 @@ set -e # Exit on error
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar
+sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar eza
 echo "Done installing base packages."
 
 # Install Neovim

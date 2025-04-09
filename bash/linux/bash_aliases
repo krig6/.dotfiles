@@ -1,11 +1,11 @@
-#project
+# project
 alias odin='cd ~/odin-restaurant && nv .' #open project with neovim
 alias proj='cd ~/odin-restaurant'         #cd to project
 
-#dotfiles
+# dotfiles
 alias dt='cd ~/.dotfiles && nv .'
 
-#alacritty
+# alacritty
 alias ala='alacritty'
 alias ac='nv "$HOME/.config/alacritty/alacritty.toml"' #open alacritty config
 alias ak='nv "$HOME/.config/alacritty/keybindings.toml"'  #open alacritty keybindings
@@ -15,13 +15,17 @@ alias nv='nvim'
 alias nc='nv ~/.config/nvim/'                          #open neovim config
 alias color='nv ~/.config/nvim/lua/plugins/colorscheme.lua' #change neovim colorscheme
 
-#bash
+# bash
 alias ali='nv .bash_aliases'    #open bash shortcuts
 alias ar='source .bash_aliases' #refresh bash shortcuts
 alias bsh='nv ~/.bashrc'        #open bash
 alias br='source ~/.bashrc'     #refresh bash
 
-#tmux
+#eza
+alias lsa='eza -la'
+alias l='eza'
+
+# tmux
 alias tm='tmux'
 alias tc='nv ~/.tmux.conf'             #open tmux config
 alias ts='nv ~/.tmux_startup.sh'         #open script
@@ -30,7 +34,7 @@ alias tk='tm kill-session' #tmux kill-session
 alias ta='tm a' #attach to tmux session
 alias tl='tm ls' #list tmux sessions
 
-# wsl
+# terminal
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias h='cd ~'
 alias c='clear'
