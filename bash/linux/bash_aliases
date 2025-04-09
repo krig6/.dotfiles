@@ -3,7 +3,7 @@ alias odin='cd ~/odin-restaurant && nv .' #open project with neovim
 alias proj='cd ~/odin-restaurant'         #cd to project
 
 #dotfiles
-alias dt='nv ~/.dotfiles'
+alias dt='cd ~/.dotfiles && nv .'
 
 #alacritty
 alias ala='alacritty'

@@ -59,25 +59,25 @@ fi
 if [ "$color_prompt" = yes ]; then
   PS1='$( \
     branch=$(parse_git_branch); \
-    folder=$(basename "$PWD"); \
+    folder=$(realpath --relative-to="$HOME" "$PWD"); \
     if [ "$PWD" == "$HOME" ]; then \
-      echo "\[\033[00m\]~ "; \
+      echo "\[\033[00m\]➜  "; \
     elif [ -n "$branch" ]; then \
-      echo "\[\033[00m\]~ $folder \[\033[38;5;217m\]($branch)\[\033[00m\] "; \
+      echo "\[\033[38;5;223m\]➜  $folder \[\033[38;5;74m\]git:\[\033[38;5;74m\](\[\033[38;5;212m\]$branch\[\033[38;5;74m\])\[\033[00m\] "; \
     else \
-      echo "\[\033[00m\]~ $folder "; \
+      echo "\[\033[38;5;223m\]➜  $folder "; \
     fi \
   )'
 else
   PS1='$( \
     branch=$(parse_git_branch); \
-    folder=$(basename "$PWD"); \
+    folder=$(realpath --relative-to="$HOME" "$PWD"); \
     if [ "$PWD" == "$HOME" ]; then \
-      echo "~ "; \
+      echo "➜  "; \
     elif [ -n "$branch" ]; then \
-      echo "~ $folder ($branch) "; \
+      echo "➜  $folder (git: $branch) "; \
     else \
-      echo "~ $folder "; \
+      echo "➜  $folder "; \
     fi \
   )'
 fi
@@ -95,7 +95,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls --color=auto'
+  alias ls='/usr/bin/ls --color=auto'
   #alias dir='dir --color=auto'
   #alias vdir='vdir --color=auto'
 
