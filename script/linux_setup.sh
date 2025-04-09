@@ -57,11 +57,15 @@ ln -sfn ~/.dotfiles/fonts ~/.local/share/fonts/custom
 fc-cache -fv
 echo "Fonts installed and cache refreshed."
 
-#-Create symlink for Gruvbox-Dark GTK theme
-echo "Linking Gruvbox-Dark theme..."
-mkdir -p ~/.themes
-ln -sfn ~/.dotfiles/Gruvbox-Dark ~/.themes/Gruvbox-Dark
-echo "GTK theme set."
+# Create symlink for icons directory
+echo "Linking icons directory..."
+ln -sfn ~/.dotfiles/icons/ ~/.icons
+echo "Symlink created for icons directory."
+
+# Create symlink for themes directory
+echo "Linking themes directory..."
+ln -sfn ~/.dotfiles/themes/ ~/.themes
+echo "Symlink created for themes directory."
 
 # Create symlink for Polybar
 echo "Linking Polybar config..."

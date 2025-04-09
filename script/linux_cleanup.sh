@@ -47,15 +47,21 @@ sudo rm -rf ~/.local/share/fonts/custom
 fc-cache -fv
 echo "Fonts removed."
 
+# Remove icons
+echo "Removing icons..."
+sudo rm -rf ~/.icons
+echo "Icons removed."
+
+echo "Fonts removed."
 # Remove Xmodmap
 echo "Removing Xmodmap..."
 sudo rm ~/.Xmodmap
 echo "Xmodmap removed."
 
 # Remove Gruvbox-Dark GTK theme
-echo "Removing Gruvbox-Dark theme..."
-sudo rm -rf ~/.themes/Gruvbox-Dark
-echo "GTK theme removed."
+echo "Removing themes..."
+sudo rm -rf ~/.themes
+echo "GTK themes removed."
 
 # Remove Polybar
 echo "Removing polybar..."
