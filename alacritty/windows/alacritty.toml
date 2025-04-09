@@ -1,6 +1,8 @@
 [general]
 import = [
    "gruvbox.toml",
+  # "rose-pine-moon.toml",
+  # "rose-pine.toml",
   # "tokyonight_night.toml",
   # "tokyonight_day.toml",
   # "solarized_osaka.toml"

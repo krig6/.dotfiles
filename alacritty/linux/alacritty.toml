@@ -1,5 +1,7 @@
 import = [
-   "~/.config/alacritty/gruvbox.toml",
+  # "~/.config/alacritty/gruvbox.toml",
+  "~/.config/alacritty/rose-pine.toml",
+  #"~/.config/alacritty/rose-pine-moon.toml",
   # "~/.config/alacritty/tokyonight_night.toml",
   # "~/.config/alacritty/tokyonight_day.toml",
   # "~/.config/alacritty/solarized_osaka.toml"
@@ -26,7 +28,7 @@ decorations = "Full" # Full
 dimensions = { columns = 150, lines = 39}
 position = {x = 220, y = 55}
 dynamic_padding = false
-opacity = 0.8
+opacity = 0.9
 
 [cursor]
 unfocused_hollow = true
