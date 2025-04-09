@@ -1,12 +1,13 @@
 import = [
   # "~/.config/alacritty/gruvbox.toml",
-  "~/.config/alacritty/rose-pine.toml",
-  #"~/.config/alacritty/rose-pine-moon.toml",
+   "~/.config/alacritty/rose-pine.toml",
+  # "~/.config/alacritty/rose-pine-moon.toml",
   # "~/.config/alacritty/tokyonight_night.toml",
   # "~/.config/alacritty/tokyonight_day.toml",
-  # "~/.config/alacritty/solarized_osaka.toml"
+  # "~/.config/alacritty/solarized_osaka.toml",
   "~/.config/alacritty/keybindings.toml"
 ]
+
 
 live_config_reload = true
 
@@ -31,7 +32,7 @@ dynamic_padding = false
 opacity = 0.9
 
 [cursor]
-unfocused_hollow = true
+unfocused_hollow = false
 
 [cursor.style]
 blinking = "Never"

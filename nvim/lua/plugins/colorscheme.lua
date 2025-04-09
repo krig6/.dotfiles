@@ -18,6 +18,8 @@ return {
   --     vim.cmd.colorscheme("gruvbox-material")
   --   end,
   -- },
+
+  -- rose-pine
   {
     "rose-pine/neovim",
     name = "rose-pine",
