@@ -61,11 +61,11 @@ if [ "$color_prompt" = yes ]; then
     branch=$(parse_git_branch); \
     folder=$(realpath --relative-to="$HOME" "$PWD"); \
     if [ "$PWD" == "$HOME" ]; then \
-      echo "\[\033[00m\]➜  "; \
+      echo "\[\033[00m\] ➜ "; \
     elif [ -n "$branch" ]; then \
-      echo "\[\033[38;5;223m\]➜  $folder \[\033[38;5;74m\]git:\[\033[38;5;74m\](\[\033[38;5;212m\]$branch\[\033[38;5;74m\])\[\033[00m\] "; \
+      echo "\[\033[38;5;223m\] ➜ $folder \[\033[38;5;74m\]git:\[\033[38;5;74m\](\[\033[38;5;212m\]$branch\[\033[38;5;74m\])\[\033[00m\] "; \
     else \
-      echo "\[\033[38;5;223m\]➜  $folder "; \
+      echo "\[\033[38;5;223m\] ➜ $folder "; \
     fi \
   )'
 else
@@ -73,11 +73,11 @@ else
     branch=$(parse_git_branch); \
     folder=$(realpath --relative-to="$HOME" "$PWD"); \
     if [ "$PWD" == "$HOME" ]; then \
-      echo "➜  "; \
+      echo " ➜  "; \
     elif [ -n "$branch" ]; then \
-      echo "➜  $folder (git: $branch) "; \
+      echo " ➜ $folder (git: $branch) "; \
     else \
-      echo "➜  $folder "; \
+      echo " ➜ $folder "; \
     fi \
   )'
 fi

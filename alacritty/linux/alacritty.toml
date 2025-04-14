@@ -8,14 +8,13 @@ import = [
   "~/.config/alacritty/keybindings.toml"
 ]
 
-
 live_config_reload = true
 
 [font]
 normal = { family = "Hack Nerd Font", style = "Regular" }
 # normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 # normal = { family = "FiraCode Nerd Font", style = "Regular" }
-size = 13
+size = 17
 
 [font.offset]
 y = 3
@@ -25,11 +24,11 @@ y = 3
 
 [window]
 startup_mode = "Windowed" # Maximized, Fullscreen
-decorations = "Full" # Full
-dimensions = { columns = 150, lines = 39}
-position = {x = 220, y = 55}
+decorations = "None" # Full
+dimensions = { columns = 120, lines = 32}
+position = {x = 125, y = 55}
 dynamic_padding = false
-opacity = 0.9
+opacity = 0.85
 
 [cursor]
 unfocused_hollow = false
