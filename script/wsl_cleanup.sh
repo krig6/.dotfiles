@@ -34,6 +34,12 @@ echo "Removing Alacritty configuration..."
 sudo rm -rf /mnt/c/Users/$PC_USERNAME/AppData/Roaming/alacritty
 echo "Alacritty configuration removed."
 
+# Remove eza and related config
+echo "Purging eza and cleaning up related files"
+sudo apt purge -y eza
+sudo rm -f /etc/apt/sources.list.d/gierens.list
+sudo rm -f /etc/apt/keyrings/gierens.gpg
+
 # Remove Tmux
 echo "Removing Tmux"
 sudo rm -rf ~/.tmux/plugins/tpm

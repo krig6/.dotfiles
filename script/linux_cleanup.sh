@@ -35,6 +35,12 @@ sudo apt-get remove --purge -y alacritty
 sudo rm -rf ~/.config/alacritty
 echo "Alacritty removed."
 
+# Remove eza and related config
+echo "Purging eza and cleaning up related files"
+sudo apt purge -y eza
+sudo rm -f /etc/apt/sources.list.d/gierens.list
+sudo rm -f /etc/apt/keyrings/gierens.gpg
+
 # Remove Tmux
 echo "Removing Tmux"
 sudo rm -rf ~/.tmux/plugins/tpm

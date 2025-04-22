@@ -12,7 +12,7 @@ read -p "Enter your PC username: " PC_USERNAME
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y xclip nodejs npm build-essential tmux eza
+sudo apt install -y xclip nodejs npm build-essential tmux
 echo "Done installing base packages."
 
 # Copy Alacritty configuration files
@@ -36,6 +36,18 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/downl
 tar -xzf lazygit.tar.gz lazygit
 sudo mv lazygit /usr/local/bin/
 rm lazygit.tar.gz
+echo "Done installing LazyGit."
+
+# Install eza
+echo "Installing eza"
+sudo apt update
+sudo apt install -y gpg
+sudo mkdir -p /etc/apt/keyrings
+wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+sudo apt update
+sudo apt install -y eza
 echo "Done installing LazyGit."
 
 # Create symlinks for configurations

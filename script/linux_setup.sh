@@ -5,7 +5,7 @@ set -e # Exit on error
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar eza rofi picom openbox xinit xserver-xorg x11-xserver-utils x11-utils
+sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar rofi picom openbox xinit xserver-xorg x11-xserver-utils x11-utils
 echo "Done installing base packages."
 
 # Install Neovim
@@ -33,6 +33,18 @@ echo "Done installing Alacritty."
 echo "Creating symlink for Alacritty config..."
 ln -sfn ~/.dotfiles/alacritty/linux ~/.config/alacritty
 echo "Done setting Alacritty config."
+
+# Install eza
+echo "Installing eza"
+sudo apt update
+sudo apt install -y gpg
+sudo mkdir -p /etc/apt/keyrings
+wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+sudo apt update
+sudo apt install -y eza
+echo "Done installing eza."
 
 # Create symlinks for configurations
 echo "Creating general config symlinks..."
