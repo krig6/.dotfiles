@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+  <menu id="root-menu" label="OpenBox 3">
+    <item label="Alacritty"> 
+      <action name="Execute">
+        <execute>alacritty</execute>
+      </action>
+    </item>
+    <item label="Brave"> 
+      <action name="Execute">
+        <execute>brave</execute>
+      </action>
+    </item>
+    <menu id="utilities" label="Utilities">
+      <item label="File Explorer">
+        <action name="Execute">
+          <execute>thunar</execute>
+        </action>
+      </item>
+      <item label="Mousepad">
+        <action name="Execute">
+          <execute>mousepad</execute>
+        </action>
+      </item>
+      <item label="Flameshot">
+        <action name="Execute">
+          <execute>flameshot gui</execute>
+        </action>
+      </item>
+      <item label="Neofetch">
+        <action name="Execute">
+          <execute>alacritty -e bash -c "neofetch; read -p 'Press enter to exit...'"</execute>
+        </action>
+      </item>
+    </menu>
+
+    <separator/>
+
+    <menu id="system" label="Openbox">
+      <menu id="openbox-settings" label="Settings">
+        <item label="Openbox Configuration"> 
+          <action name="Execute">
+            <execute>obconf</execute>
+          </action>
+        </item>
+        <item label="Autostart"> 
+          <action name="Execute">
+            <execute>alacritty -e /opt/nvim-linux-x86_64/bin/nvim ~/.config/openbox/autostart</execute>
+          </action>
+        </item>
+        <item label="Keybinds"> 
+          <action name="Execute">
+            <execute>alacritty -e /opt/nvim-linux-x86_64/bin/nvim ~/.config/openbox/rc.xml</execute>
+          </action>
+        </item>
+        <item label="Menu Items">
+          <action name="Execute">
+            <execute>alacritty -e /opt/nvim-linux-x86_64/bin/nvim ~/.config/openbox/menu.xml</execute>
+          </action>
+        </item>
+      </menu>
+      <item label="Reconfigure">
+        <action name="Execute">
+          <execute>openbox --reconfigure</execute>
+        </action>
+      </item>
+      <item label="Restart"> 
+        <action name="Execute">
+          <execute>openbox --restart</execute>
+        </action>
+      </item>
+    </menu>
+
+    <separator />
+
+      <item label="Log Out">
+        <action name="Exit">
+          <prompt>yes</prompt>
+        </action>
+      </item>
+    </menu>
+</openbox_menu>

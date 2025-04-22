@@ -1,0 +1,23 @@
+# Start Picom (Compositor)
+picom --config ~/.config/picom/picom.conf &
+
+# Start Polybar
+polybar top &
+
+# dunst
+dunst &
+
+# Set keymaps
+xmodmap ~/.Xmodmap
+
+# Set refresh rate to 144hz
+xrandr --output HDMI-0 --mode 1920x1080 --rate 144.00 &
+
+# Disable screen blanking and DPMS
+xset s off           # disable screensaver
+xset s 0 0
+xset -dpms           # disable Display Power Management
+xset s noblank       # don't blank the screen
+
+
+
