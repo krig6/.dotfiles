@@ -5,7 +5,7 @@ set -e # Exit on error
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar eza
+sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar eza rofi picom openbox xinit xserver-xorg x11-xserver-utils x11-utils
 echo "Done installing base packages."
 
 # Install Neovim
@@ -36,7 +36,7 @@ echo "Done setting Alacritty config."
 
 # Create symlinks for configurations
 echo "Creating general config symlinks..."
-ln -sfn ~/.dotfiles/bash/bashrc ~/.bashrc
+ln -sfn ~/.dotfiles/bash/.bashrc ~/.bashrc
 ln -sfn ~/.dotfiles/bash/linux/bash_aliases ~/.bash_aliases
 ln -sfn ~/.dotfiles/nvim ~/.config/nvim
 ln -sfn ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf

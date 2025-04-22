@@ -12,7 +12,7 @@ read -p "Enter your PC username: " PC_USERNAME
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y xclip nodejs npm build-essential tmux
+sudo apt install -y xclip nodejs npm build-essential tmux eza
 echo "Done installing base packages."
 
 # Copy Alacritty configuration files
@@ -40,7 +40,7 @@ echo "Done installing LazyGit."
 
 # Create symlinks for configurations
 echo "Creating general config symlinks..."
-ln -sfn ~/.dotfiles/bash/bashrc ~/.bashrc
+ln -sfn ~/.dotfiles/bash/.bashrc ~/.bashrc
 ln -sfn ~/.dotfiles/bash/windows/bash_aliases ~/.bash_aliases
 ln -sfn ~/.dotfiles/nvim ~/.config/nvim
 ln -sfn ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf

@@ -56,6 +56,7 @@ if [ -n "$force_color_prompt" ]; then
   fi
 fi
 
+# Start of custom PS1 prompt configuration
 if [ "$color_prompt" = yes ]; then
   PS1='$( \
     branch=$(parse_git_branch); \
@@ -81,6 +82,8 @@ else
     fi \
   )'
 fi
+# End of custom PS1 prompt configuration
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -139,6 +142,7 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+# Returns the name of the current Git branch
 parse_git_branch() {
   git rev-parse --abbrev-ref HEAD 2>/dev/null
 }

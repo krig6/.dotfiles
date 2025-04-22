@@ -7,12 +7,12 @@ alias dt='cd ~/.dotfiles && nv .'
 
 # alacritty
 alias ala='alacritty'
-alias ac='nv "$HOME/.config/alacritty/alacritty.toml"' #open alacritty config
-alias ak='nv "$HOME/.config/alacritty/keybindings.toml"'  #open alacritty keybindings
+alias ac='nv "$HOME/.config/alacritty/alacritty.toml"'   #open alacritty config
+alias ak='nv "$HOME/.config/alacritty/keybindings.toml"' #open alacritty keybindings
 
 # neovim
 alias nv='nvim'
-alias nc='nv ~/.config/nvim/'                          #open neovim config
+alias nc='nv ~/.config/nvim/'                               #open neovim config
 alias color='nv ~/.config/nvim/lua/plugins/colorscheme.lua' #change neovim colorscheme
 
 # bash
@@ -20,22 +20,30 @@ alias ali='nv .bash_aliases'    #open bash shortcuts
 alias ar='source .bash_aliases' #refresh bash shortcuts
 alias bsh='nv ~/.bashrc'        #open bash
 alias br='source ~/.bashrc'     #refresh bash
+alias st='startx'
 
-#eza
+# eza
 alias lsa='eza -la'
 alias l='eza'
 
+# themes
+alias rt='bash rose-pine-theme.sh && br'
+alias gt='bash gruvbox-theme.sh && br'
+
 # tmux
 alias tm='tmux'
-alias tc='nv ~/.tmux.conf'             #open tmux config
+alias tc='nv ~/.tmux.conf'               #open tmux config
 alias ts='nv ~/.tmux_startup.sh'         #open script
 alias tr='tmux source-file ~/.tmux.conf' #refresh tmux config
-alias tk='tm kill-session' #tmux kill-session
-alias ta='tm a' #attach to tmux session
-alias tl='tm ls' #list tmux sessions
+alias tk='tm kill-session'               #tmux kill-session
+alias ta='tm a'                          #attach to tmux session
+alias tl='tm ls'                         #list tmux sessions
 
 # terminal
-alias update='sudo apt-get update && sudo apt-get upgrade'
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
+alias inst='sudo apt install'
+alias purge='sudo apt purge'
 alias h='cd ~'
 alias c='clear'
 alias e='exit'
