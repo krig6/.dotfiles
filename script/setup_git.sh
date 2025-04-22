@@ -4,7 +4,7 @@ set -e # Exit on error
 
 # Update and install required packages
 echo "Updating system and installing git..."
-sudo apt update && sudo apt upgrade -y
+sudo apt update
 sudo apt install git -y
 
 # Promp for Git username and Git email

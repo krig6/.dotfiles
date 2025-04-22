@@ -4,7 +4,7 @@ set -e # Exit on error
 
 # Update and install required packages
 echo "Updating system and installing essential packages..."
-sudo apt update && sudo apt upgrade -y
+sudo apt update
 sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar rofi picom openbox xinit xserver-xorg x11-xserver-utils x11-utils
 echo "Done installing base packages."
 
@@ -51,6 +51,7 @@ echo "Creating general config symlinks..."
 ln -sfn ~/.dotfiles/bash/.bashrc ~/.bashrc
 ln -sfn ~/.dotfiles/bash/linux/bash_aliases ~/.bash_aliases
 ln -sfn ~/.dotfiles/nvim ~/.config/nvim
+ln -sfn ~/.dotfiles/x11/.xinitrc ~/.xinitrc
 ln -sfn ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sfn ~/.dotfiles/tmux/tmux_startup.sh ~/.tmux_startup.sh
 echo "Done creating general config symlinks."
@@ -59,7 +60,6 @@ echo "Done creating general config symlinks."
 # This Xmodmap is used to swap Caps Lock and Escape key
 echo "Setting Xmodmap for Caps/Esc swap..."
 ln -sfn ~/.dotfiles/x11/.Xmodmap ~/.Xmodmap
-xmodmap ~/.Xmodmap
 echo "Xmodmap setup complete."
 
 # Create symlink for fonts
@@ -79,12 +79,35 @@ echo "Linking themes directory..."
 ln -sfn ~/.dotfiles/themes/ ~/.themes
 echo "Symlink created for themes directory."
 
+# Create symlinks in ~/.config/script pointing to individual theme switcher scripts
+mkdir -p ~/.config/script
+ln -sfn ~/.dotfiles/script/rose-pine-theme.sh ~/.config/script/rose-pine-theme.sh
+ln -sfn ~/.dotfiles/script/gruvbox-theme.sh ~/.config/script/gruvbox-theme.sh
+
 # Create symlink for Polybar
 echo "Linking Polybar config..."
 ln -sfn ~/.dotfiles/polybar ~/.config/polybar
 sleep 10
 polybar top &
 echo "Polybar launched!"
+
+# Create symlink for Openbox
+echo "Linking Openbox config..."
+ln -sfn ~/.dotfiles/openbox ~/.config/openbox
+sleep 10
+echo "Symlink for Openbox created!"
+
+# Create symlink for Picom
+echo "Linking Picom config..."
+ln -sfn ~/.dotfiles/picom ~/.config/picom
+sleep 10
+echo "Symlink for Picom created!"
+
+# Create symlink for Rofi
+echo "Linking Rofi config..."
+ln -sfn ~/.dotfiles/rofi ~/.config/rofi
+sleep 10
+echo "Symlink for Rofi created!"
 
 # Making sure that tmux script is executable
 echo "Ensuring tmux startup script is executable..."

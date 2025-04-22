@@ -64,22 +64,45 @@ echo "Removing Xmodmap..."
 sudo rm ~/.Xmodmap
 echo "Xmodmap removed."
 
-# Remove Gruvbox-Dark GTK theme
+# Remove GTK theme
 echo "Removing themes..."
 sudo rm -rf ~/.themes
 echo "GTK themes removed."
+
+# Remove symlinks for theme switcher scripts from ~/.config/script
+rm -f ~/.config/script/rose-pine-theme.sh
+rm -f ~/.config/script/gruvbox-theme.sh
 
 # Remove Polybar
 echo "Removing polybar..."
 sudo apt-get remove --purge -y polybar
 sudo rm -rf ~/.config/polybar
-killall polybar
 echo "Polybar removed."
 
+# Purge symlink for Openbox
+echo "Purging Openbox config symlink..."
+rm -f ~/.config/openbox
+sleep 2
+echo "Openbox symlink purged!"
+
+# Purge symlink for Picom
+echo "Purging Picom config symlink..."
+rm -f ~/.config/picom
+sleep 2
+echo "Picom symlink purged!"
+
+# Purge symlink for Rofi
+echo "Purging Rofi config symlink..."
+rm -f ~/.config/rofi
+sleep 2
+echo "Rofi symlink purged!"
+
+echo "Cleanup complete!"
 # Remove dotfiles folder and symlink
 echo "Removing dotfiles and symlinks..."
 sudo rm -rf ~/.dotfiles
 sudo rm -f ~/.bashrc ~/.bash_aliases
+sudo rm -f ~/.xinitrc
 sudo rm -f ~/.tmux.conf ~/.tmux_startup.sh
 echo "Dotfiles and symlinks removed."
 

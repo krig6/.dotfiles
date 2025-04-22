@@ -11,7 +11,7 @@ read -p "Enter your PC username: " PC_USERNAME
 
 # Update and install required packages
 echo "Updating system and installing essential packages..."
-sudo apt update && sudo apt upgrade -y
+sudo apt update
 sudo apt install -y xclip nodejs npm build-essential tmux
 echo "Done installing base packages."
 
