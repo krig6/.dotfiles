@@ -127,16 +127,13 @@ else
   echo "Bash configuration not found, skipping."
 fi
 
-if [ -f ~/.config/gtk-3.0/settings.ini ]; then
-  echo "Updating GTK theme and icons..."
-  echo "
+mkdir -p ~/.config/gtk-3.0
+
+echo "Updating GTK theme and icons..."
+cat >~/.config/gtk-3.0/settings.ini <<EOF
 [Settings]
 gtk-theme-name=Gruvbox-Dark
 gtk-icon-theme-name=Papirus
-" >~/.config/gtk-3.0/settings.ini
-  echo "GTK theme and icons updated successfully!"
-else
-  echo "GTK configuration not found, skipping."
-fi
-
+EOF
+echo "GTK theme and icons updated successfully!"
 echo "Gruvbox Material theme applied successfully!"

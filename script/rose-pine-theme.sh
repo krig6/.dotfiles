@@ -127,15 +127,13 @@ else
   echo "Bash configuration not found, skipping."
 fi
 
-if [ -f ~/.config/gtk-3.0/settings.ini ]; then
-  echo "Updating GTK theme and icons..."
-  echo "
+mkdir -p ~/.config/gtk-3.0
+
+echo "Updating GTK theme and icons..."
+cat >~/.config/gtk-3.0/settings.ini <<EOF
 [Settings]
 gtk-theme-name=Rose-Pine
-gtk-icon-theme-name=rose-pine-icons" >~/.config/gtk-3.0/settings.ini
-  echo "GTK theme and icons updated successfully!"
-else
-  echo "GTK configuration not found, skipping."
-fi
-
+gtk-icon-theme-name=rose-pine-icons
+EOF
+echo "GTK theme and icons updated successfully!"
 echo "Rose Pine theme applied!"
