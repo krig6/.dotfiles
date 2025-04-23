@@ -27,8 +27,8 @@ alias lsa='eza -la'
 alias l='eza'
 
 # themes
-alias rt='bash rose-pine-theme.sh && br'
-alias gt='bash gruvbox-theme.sh && br'
+alias rt='bash ~/.config/script/rose-pine-theme.sh && br'
+alias gt='bash ~/.config/script/gruvbox-theme.sh && br'
 
 # tmux
 alias tm='tmux'

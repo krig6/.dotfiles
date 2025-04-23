@@ -88,8 +88,7 @@ ln -sfn ~/.dotfiles/script/gruvbox-theme.sh ~/.config/script/gruvbox-theme.sh
 echo "Linking Polybar config..."
 ln -sfn ~/.dotfiles/polybar ~/.config/polybar
 sleep 10
-polybar top &
-echo "Polybar launched!"
+echo "Symlink for Polybar created!"
 
 # Create symlink for Openbox
 echo "Linking Openbox config..."
@@ -120,6 +119,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "TPM installed"
 
 echo "Setup complete!"
+
+# Polybar reminder
+echo "If you're using a graphical session, you can launch Polybar manually: polybar top &"
 
 # Prompt to install Tmux plugins
 echo "Open tmux and press Prefix + I to install plugins."
