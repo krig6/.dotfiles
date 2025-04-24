@@ -6,7 +6,7 @@ echo "Cleaning up installed packages, configurations, and dotfiles..."
 
 # Uninstall packages
 echo "Removing installed packages..."
-sudo apt remove --purge -y xclip nodejs npm build-essential tmux curl papirus-icon-theme eza rofi picom openbox xinit xserver-xorg x11-xserver-utils x11-utils
+sudo apt purge -y xclip nodejs npm build-essential tmux curl papirus-icon-theme eza rofi picom openbox xinit feh flameshot thunar mousepad
 sudo apt autoremove -y
 sudo apt clean
 echo "System packages removed."
@@ -31,7 +31,7 @@ echo "LazyGit removed."
 
 # Remove Alacritty
 echo "Removing Alacritty..."
-sudo apt-get remove --purge -y alacritty
+sudo apt purge -y alacritty
 sudo rm -rf ~/.config/alacritty
 echo "Alacritty removed."
 
@@ -70,30 +70,32 @@ sudo rm -rf ~/.themes
 echo "GTK themes removed."
 
 # Remove symlinks for theme switcher scripts from ~/.config/script
-rm -f ~/.config/script/rose-pine-theme.sh
-rm -f ~/.config/script/gruvbox-theme.sh
+sudo rm -rf ~/.config/script
 
 # Remove Polybar
 echo "Removing polybar..."
-sudo apt-get remove --purge -y polybar
+sudo apt purge -y polybar
 sudo rm -rf ~/.config/polybar
 echo "Polybar removed."
 
 # Purge symlink for Openbox
 echo "Purging Openbox config symlink..."
-rm -f ~/.config/openbox
+sudo apt purge -y openbox
+sudo rm -rf ~/.config/openbox
 sleep 2
 echo "Openbox symlink purged!"
 
 # Purge symlink for Picom
 echo "Purging Picom config symlink..."
-rm -f ~/.config/picom
+sudo apt purge -y picom
+sudo rm -rf ~/.config/picom
 sleep 2
 echo "Picom symlink purged!"
 
 # Purge symlink for Rofi
 echo "Purging Rofi config symlink..."
-rm -f ~/.config/rofi
+sudo apt purge -y rofi
+sudo rm -rf ~/.config/rofi
 sleep 2
 echo "Rofi symlink purged!"
 
