@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-xterm-color | *-256color) color_prompt=yes ;;
+xterm-color | *-256color | alacritty) color_prompt=yes ;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -135,7 +135,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH="$PATH:/opt/nvim/"
 
 #Go to home directory of WSL when Alacritty is opened
-cd
+# cd
 
 # Alias definitions
 if [ -f ~/.bash_aliases ]; then
@@ -146,3 +146,8 @@ fi
 parse_git_branch() {
   git rev-parse --abbrev-ref HEAD 2>/dev/null
 }
+
+# Start tmux if not already inside tmux
+if [ -z "$TMUX" ]; then
+  tmux
+fi
