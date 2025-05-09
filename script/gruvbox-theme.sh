@@ -133,7 +133,7 @@ if [ -f ~/.config/openbox/autostart ]; then
     BEGIN { in_block = 0 }
     /^#[[:space:]]*Set wallpaper/ {
       print "# Set wallpaper"
-      print "feh --bg-scale Downloads/gruvbox.jpg"
+      print "feh --bg-scale ~/.dotfiles/wallpapers/gruvbox.jpg"
       in_block = 1
       next
     }
@@ -145,8 +145,8 @@ if [ -f ~/.config/openbox/autostart ]; then
     in_block { next }
     { print }
   ' ~/.config/openbox/autostart >/tmp/openbox.tmp && mv /tmp/openbox.tmp ~/.config/openbox/autostart
-  feh --bg-scale Downloads/gruvbox.jpg
-  betterlockscreen -u Downloads/gruvbox.jpg
+  feh --bg-scale ~/.dotfiles/wallpapers/gruvbox.jpg
+  betterlockscreen -u ~/.dotfiles/wallpapers/gruvbox.jpg
   echo "Wallpaper updated and set in Openbox!"
 else
   echo "Wallpaper not found, skipping."

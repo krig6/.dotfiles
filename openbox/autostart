@@ -1,5 +1,5 @@
 # Set wallpaper
-feh --bg-scale Downloads/rosepine.jpg
+feh --bg-scale ~/.dotfiles/wallpapers/rosepine.jpg
 # Wallpaper
 
 # Start Polybar
