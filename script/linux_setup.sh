@@ -8,6 +8,9 @@ sudo apt update
 sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar rofi picom openbox xinit feh flameshot thunar mousepad ripgrep imagemagick bc
 echo "Done installing base packages."
 
+# Install Brave
+curl -fsS https://dl.brave.com/install.sh | sh
+
 # Install Neovim
 echo "Installing Neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
