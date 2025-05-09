@@ -1,7 +1,8 @@
 @import "default"
 
+// Start of color definitions
 * {
-bg: #191724;
+bg:  #191724;
 cur: #44415a;
 fgd: #e0def4;
 cmt: #6e6a86;
@@ -11,6 +12,7 @@ ora: #ebbcba;
 pur: #c4a7e7;
 red: #eb6f92;
 yel: #f6c177;
+// End of color definitions
 
 	font: "Hack Nerd Font 10";
 
@@ -122,7 +124,7 @@ yel: #f6c177;
 }
 #prompt {
 	spacing:    0;
-	text-color: @grn;
+	text-color: @ora;
 }
 #inputbar {
 	children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
@@ -131,5 +133,5 @@ yel: #f6c177;
 	expand:     false;
 	str:        ":";
 	margin:     0px 0.3em 0em 0em;
-	text-color: @grn;
+	text-color: @ora;
 }

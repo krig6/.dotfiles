@@ -127,6 +127,87 @@ else
   echo "Bash configuration not found, skipping."
 fi
 
+if [ -f ~/.config/openbox/autostart ]; then
+  echo "Setting wallpaper in Openbox..."
+  awk '
+    BEGIN { in_block = 0 }
+    /^#[[:space:]]*Set wallpaper/ {
+      print "# Set wallpaper"
+      print "feh --bg-scale Downloads/gruvbox.jpg"
+      in_block = 1
+      next
+    }
+  in_block && /^#[[:space:]]*Wallpaper/ {
+    print "# Wallpaper"
+    in_block = 0
+    next
+    }
+    in_block { next }
+    { print }
+  ' ~/.config/openbox/autostart >/tmp/openbox.tmp && mv /tmp/openbox.tmp ~/.config/openbox/autostart
+  feh --bg-scale Downloads/gruvbox.jpg
+  betterlockscreen -u Downloads/gruvbox.jpg
+  echo "Wallpaper updated and set in Openbox!"
+else
+  echo "Wallpaper not found, skipping."
+fi
+
+if [ -f ~/.config/rofi/config.rasi ]; then
+  echo "Setting Rofi theme..."
+  awk '
+    BEGIN { in_block = 0 }
+    /^[[:space:]]*\/\/ Start of color definitions/ {
+      print "// Start of color definitions"
+      print "* {"
+      print "bg: #1d2021;"
+      print "cur: #3c3836;"
+      print "fgd: #ebdbb2;"
+      print "cmt: #928374;"
+      print "cya: #89b482;"
+      print "grn: #a9b665;"
+      print "ora: #fe8019;"
+      print "pur: #d3869b;"
+      print "red: #ea6962;"
+      print "yel: #d8a657;"
+      in_block = 1
+      next
+    }
+  in_block && /^[[:space:]]*\/\/ End of color definitions/ {
+    print "// End of color definitions"
+    in_block = 0
+    next
+    }
+    in_block { next }
+    { print }
+  ' ~/.config/rofi/config.rasi >/tmp/rofi.tmp && mv /tmp/rofi.tmp ~/.config/rofi/config.rasi
+  echo "Rofi theme updated!"
+else
+  echo "Rofi theme not found, skipping."
+fi
+
+if [ -f ~/.tmux.conf ]; then
+  echo "Setting tmux theme..."
+  awk '
+    BEGIN { in_block = 0 }
+    /^#[[:space:]]*Set tmux theme/ {
+      print "# Set tmux theme"
+      print "set -g @plugin '\''egel/tmux-gruvbox'\''"
+      in_block = 1
+      next
+    }
+  in_block && /^#[[:space:]]*tmux theme/ {
+    print "# tmux theme"
+    in_block = 0
+    next
+    }
+    in_block { next }
+    { print }
+  ' ~/.tmux.conf >/tmp/.tmux.tmp && mv /tmp/.tmux.tmp ~/.tmux.conf
+  echo "Tmux theme updated!"
+else
+  echo "Tmux theme not found, skipping."
+fi
+
 mkdir -p ~/.config/gtk-3.0
 
 echo "Updating GTK theme and icons..."
