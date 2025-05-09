@@ -6,7 +6,7 @@ echo "Cleaning up installed packages, configurations, and dotfiles..."
 
 # Uninstall packages
 echo "Removing installed packages..."
-sudo apt purge -y xclip nodejs npm build-essential tmux curl papirus-icon-theme eza rofi picom openbox xinit feh flameshot thunar mousepad
+sudo apt purge -y xclip nodejs npm build-essential tmux curl papirus-icon-theme eza rofi picom openbox xinit feh flameshot thunar mousepad ripgrep imagemagick bc
 sudo apt autoremove -y
 sudo apt clean
 echo "System packages removed."
@@ -98,6 +98,19 @@ sudo apt purge -y rofi
 sudo rm -rf ~/.config/rofi
 sleep 2
 echo "Rofi symlink purged!"
+
+# Remove i3lock-color dependencies
+echo "Removing i3lock-color dependencies..."
+sudo apt remove --purge -y autoconf gcc make pkg-config libpam0g-dev libcairo2-dev libfontconfig1-dev libxcb-composite0-dev libev-dev libx11-xcb-dev libxcb-xkb-dev libxcb-xinerama0-dev libxcb-randr0-dev libxcb-image0-dev libxcb-util0-dev libxcb-xrm-dev libxkbcommon-dev libxkbcommon-x11-dev libjpeg-dev libgif-dev
+
+# Remove i3lock-color source directory
+echo "Removing i3lock-color directory..."
+rm -rf ~/i3lock-color
+
+# Remove betterlockscreen installation
+echo "Removing betterlockscreen..."
+rm -f ~/.config/betterlockscreenrc
+rm -rf ~/.dotfiles/betterlockscreen
 
 echo "Cleanup complete!"
 # Remove dotfiles folder and symlink

@@ -5,7 +5,7 @@ set -e # Exit on error
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update
-sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar rofi picom openbox xinit feh flameshot thunar mousepad
+sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar rofi picom openbox xinit feh flameshot thunar mousepad ripgrep imagemagick bc
 echo "Done installing base packages."
 
 # Install Neovim
@@ -107,6 +107,16 @@ echo "Linking Rofi config..."
 ln -sfn ~/.dotfiles/rofi ~/.config/rofi
 sleep 10
 echo "Symlink for Rofi created!"
+
+# Install i3lock-color
+sudo apt install autoconf gcc make pkg-config libpam0g-dev libcairo2-dev libfontconfig1-dev libxcb-composite0-dev libev-dev libx11-xcb-dev libxcb-xkb-dev libxcb-xinerama0-dev libxcb-randr0-dev libxcb-image0-dev libxcb-util0-dev libxcb-xrm-dev libxkbcommon-dev libxkbcommon-x11-dev libjpeg-dev libgif-dev
+git clone https://github.com/Raymo111/i3lock-color.git
+cd i3lock-color
+./install-i3lock-color.sh
+
+# Install betterlockscreen
+wget https://raw.githubusercontent.com/betterlockscreen/betterlockscreen/main/install.sh -O - -q | sudo bash -s system
+ln -sfn ~/.dotfiles/betterlockscreen/betterlockscreenrc ~/.config/betterlockscreenrc
 
 # Making sure that tmux script is executable
 echo "Ensuring tmux startup script is executable..."
