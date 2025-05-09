@@ -9,7 +9,7 @@ sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-them
 echo "Done installing base packages."
 
 # Install Brave
-curl -fsS https://dl.brave.com/install.sh | sh
+curl -fsS https://dl.brave.com/install.sh | sudo sh
 
 # Install Neovim
 echo "Installing Neovim..."
