@@ -8,10 +8,15 @@
     </item>
     <item label="Brave"> 
       <action name="Execute">
-        <execute>brave</execute>
+        <execute>brave-browser</execute>
       </action>
     </item>
     <menu id="utilities" label="Utilities">
+      <item label="Terminal">
+        <action name="Execute">
+          <execute>xfce4-terminal</execute>
+        </action>
+      </item>
       <item label="File Explorer">
         <action name="Execute">
           <execute>thunar</execute>
@@ -30,6 +35,19 @@
       <item label="Neofetch">
         <action name="Execute">
           <execute>alacritty -e bash -c "neofetch; read -p 'Press enter to exit...'"</execute>
+        </action>
+      </item>
+    </menu>
+    <menu id="theme" label="Themes">
+      <item label="Rose Pine">
+        <action name="Execute">
+          <execute>bash ~/.config/script/rose-pine-theme.sh && br</execute>
+        </action>
+      </item>
+
+      <item label="Gruvbox">
+        <action name="Execute">
+          <execute>bash ~/.config/script/gruvbox-theme.sh && br</execute>
         </action>
       </item>
     </menu>
@@ -70,13 +88,17 @@
         </action>
       </item>
     </menu>
-
     <separator />
-
-      <item label="Log Out">
-        <action name="Exit">
-          <prompt>yes</prompt>
-        </action>
-      </item>
-    </menu>
+    <item label="Lock Screen">
+      <action name="Execute">
+        <execute>betterlockscreen -l</execute>
+      </action>
+    </item>
+    <item label="Log Out">
+      <action name="Exit">
+        <prompt>yes</prompt>
+      </action>
+    </item>
+  </menu>
 </openbox_menu>
+

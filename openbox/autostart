@@ -1,11 +1,15 @@
-# Start Picom (Compositor)
-picom --config ~/.config/picom/picom.conf &
+# Set wallpaper
+feh --bg-scale Downloads/rosepine.jpg
+# Wallpaper
 
 # Start Polybar
 polybar top &
 
 # dunst
 dunst &
+
+# Start Picom (Compositor)
+picom --config ~/.config/picom/picom.conf &
 
 # Set keymaps
 xmodmap ~/.Xmodmap
@@ -18,6 +22,3 @@ xset s off           # disable screensaver
 xset s 0 0
 xset -dpms           # disable Display Power Management
 xset s noblank       # don't blank the screen
-
-
-

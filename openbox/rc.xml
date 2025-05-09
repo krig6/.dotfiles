@@ -82,7 +82,7 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>65</top>
+    <top>60</top>
     <bottom>20</bottom>
     <left>20</left>
     <right>20</right>
@@ -192,6 +192,16 @@
         <command>thunar</command>
       </action>
     </keybind>
+    <keybind key="A-F4">
+      <action name="Execute">
+        <command>systemctl poweroff</command>
+      </action>
+    </keybind>
+    <keybind key="A-F5">
+      <action name="Execute">
+        <command>betterlockscreen -l</command>
+      </action>
+    </keybind>
     <keybind key="W-3">
       <action name="Execute">
         <command>alacritty</command>
@@ -199,7 +209,7 @@
     </keybind>
     <keybind key="W-1">
       <action name="Execute">
-        <command>brave</command>
+        <command>brave-browser</command>
         <!-- or whatever browser you use -->
       </action>
     </keybind>
