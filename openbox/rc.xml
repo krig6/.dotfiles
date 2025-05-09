@@ -199,6 +199,11 @@
     </keybind>
     <keybind key="A-F5">
       <action name="Execute">
+        <command>systemctl reboot</command>
+      </action>
+    </keybind>
+    <keybind key="A-F6">
+      <action name="Execute">
         <command>betterlockscreen -l</command>
       </action>
     </keybind>
