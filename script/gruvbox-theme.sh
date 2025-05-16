@@ -1,13 +1,12 @@
-if [ -f ~/.config/nvim/lua/plugins/colorscheme.lua ]; then
-  echo "Updating Neovim colorscheme configuration..."
-  echo "return {
+if [ -f ~/.config/nvim/lua/ekodes/plugins/colorscheme.lua ]; then
+    echo "Updating Neovim colorscheme configuration..."
+    echo "return {
   {
     'sainnhe/gruvbox-material',
     enabled = true,
     priority = 1000,
     config = function()
-      vim.g.gruvbox_material_transparent_background = 1
-      vim.g.gruvbox_material_foreground = 'original' -- mix, material, original
+      vim.g.gruvbox_material_transparent_background = 1 vim.g.gruvbox_material_foreground = 'original' -- mix, material, original
       vim.g.gruvbox_material_background = 'hard' -- soft, medium, hard
       vim.g.gruvbox_material_ui_contrast = 'high' -- The contrast of line numbers, indent lines, etc.
       vim.g.gruvbox_material_float_style = 'dim' -- Background of floating windows (dim, bright)
@@ -17,15 +16,15 @@ if [ -f ~/.config/nvim/lua/plugins/colorscheme.lua ]; then
       vim.cmd.colorscheme('gruvbox-material')
     end,
   }
-}" >~/.config/nvim/lua/plugins/colorscheme.lua
-  echo "Neovim colorscheme updated successfully!"
+}" >~/.config/nvim/lua/ekodes/plugins/colorscheme.lua
+    echo "Neovim colorscheme updated successfully!"
 else
-  echo "Neovim colorscheme configuration not found, skipping."
+    echo "Neovim colorscheme configuration not found, skipping."
 fi
 
 if [ -f ~/.config/alacritty/alacritty.toml ]; then
-  echo "Updating Alacritty theme..."
-  awk '
+    echo "Updating Alacritty theme..."
+    awk '
     BEGIN { in_block = 0 }
     /^import = \[/ {
       print "import = ["
@@ -42,14 +41,14 @@ if [ -f ~/.config/alacritty/alacritty.toml ]; then
     in_block { next }
     { print }
   ' ~/.config/alacritty/alacritty.toml >/tmp/alacritty.tmp && mv /tmp/alacritty.tmp ~/.config/alacritty/alacritty.toml
-  echo "Alacritty configuration updated successfully!"
+    echo "Alacritty configuration updated successfully!"
 else
-  echo "Alacritty configuration not found, skipping."
+    echo "Alacritty configuration not found, skipping."
 fi
 
 if [ -f ~/.config/polybar/config.ini ]; then
-  echo "Updating Polybar colors..."
-  awk '
+    echo "Updating Polybar colors..."
+    awk '
     BEGIN { in_block = 0 }
     /^;[[:space:]]*Start of color definitions/ {
       print "; Start of color definitions"
@@ -73,16 +72,16 @@ if [ -f ~/.config/polybar/config.ini ]; then
     { print }
   ' ~/.config/polybar/config.ini >/tmp/polybar.tmp && mv /tmp/polybar.tmp ~/.config/polybar/config.ini
 
-  killall polybar
-  polybar top &
-  echo "Polybar updated and restarted successfully!"
+    killall polybar
+    polybar top &
+    echo "Polybar updated and restarted successfully!"
 else
-  echo "Polybar configuration not found, skipping."
+    echo "Polybar configuration not found, skipping."
 fi
 
 if [ -f ~/.bashrc ]; then
-  echo "Updating Bash prompt (PS1)..."
-  awk '
+    echo "Updating Bash prompt (PS1)..."
+    awk '
     BEGIN { in_block = 0 }
     /^#[[:space:]]*Start of custom PS1 prompt configuration/ {
       print "# Start of custom PS1 prompt configuration"
@@ -122,14 +121,14 @@ if [ -f ~/.bashrc ]; then
     in_block { next }
     { print }
   ' ~/.bashrc >/tmp/.bashrc.tmp && mv /tmp/.bashrc.tmp ~/.bashrc
-  echo "Bash prompt updated successfully!"
+    echo "Bash prompt updated successfully!"
 else
-  echo "Bash configuration not found, skipping."
+    echo "Bash configuration not found, skipping."
 fi
 
 if [ -f ~/.config/openbox/autostart ]; then
-  echo "Setting wallpaper in Openbox..."
-  awk '
+    echo "Setting wallpaper in Openbox..."
+    awk '
     BEGIN { in_block = 0 }
     /^#[[:space:]]*Set wallpaper/ {
       print "# Set wallpaper"
@@ -145,16 +144,16 @@ if [ -f ~/.config/openbox/autostart ]; then
     in_block { next }
     { print }
   ' ~/.config/openbox/autostart >/tmp/openbox.tmp && mv /tmp/openbox.tmp ~/.config/openbox/autostart
-  feh --bg-scale ~/.dotfiles/wallpapers/gruvbox.jpg
-  betterlockscreen -u ~/.dotfiles/wallpapers/gruvbox.jpg
-  echo "Wallpaper updated and set in Openbox!"
+    feh --bg-scale ~/.dotfiles/wallpapers/gruvbox.jpg
+    betterlockscreen -u ~/.dotfiles/wallpapers/gruvbox.jpg
+    echo "Wallpaper updated and set in Openbox!"
 else
-  echo "Wallpaper not found, skipping."
+    echo "Wallpaper not found, skipping."
 fi
 
 if [ -f ~/.config/rofi/config.rasi ]; then
-  echo "Setting Rofi theme..."
-  awk '
+    echo "Setting Rofi theme..."
+    awk '
     BEGIN { in_block = 0 }
     /^[[:space:]]*\/\/ Start of color definitions/ {
       print "// Start of color definitions"
@@ -180,14 +179,14 @@ if [ -f ~/.config/rofi/config.rasi ]; then
     in_block { next }
     { print }
   ' ~/.config/rofi/config.rasi >/tmp/rofi.tmp && mv /tmp/rofi.tmp ~/.config/rofi/config.rasi
-  echo "Rofi theme updated!"
+    echo "Rofi theme updated!"
 else
-  echo "Rofi theme not found, skipping."
+    echo "Rofi theme not found, skipping."
 fi
 
 if [ -f ~/.tmux.conf ]; then
-  echo "Setting tmux theme..."
-  awk '
+    echo "Setting tmux theme..."
+    awk '
     BEGIN { in_block = 0 }
     /^#[[:space:]]*Set tmux theme/ {
       print "# Set tmux theme"
@@ -203,9 +202,9 @@ if [ -f ~/.tmux.conf ]; then
     in_block { next }
     { print }
   ' ~/.tmux.conf >/tmp/.tmux.tmp && mv /tmp/.tmux.tmp ~/.tmux.conf
-  echo "Tmux theme updated!"
+    echo "Tmux theme updated!"
 else
-  echo "Tmux theme not found, skipping."
+    echo "Tmux theme not found, skipping."
 fi
 
 mkdir -p ~/.config/gtk-3.0
