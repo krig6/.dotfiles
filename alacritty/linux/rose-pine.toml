@@ -2,15 +2,14 @@
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#colors
 
 [colors.primary]
-foreground = "#907aa9"
-# background = "#191724"
+foreground = "#c4a7e7"
 background = "#0a0a0a"
 dim_foreground = "#908caa"
 bright_foreground = "#e0def4"
 
 [colors.cursor]
 text = "#e0def4"
-cursor = "#d7827e"
+cursor = "#b87c77"
 
 [colors.vi_mode_cursor]
 text = "#e0def4"
@@ -45,13 +44,13 @@ text = "#e0def4"
 background = "#403d52"
 
 [colors.normal]
-black = "#26233a"
-red = "#eb6f92"
-green = "#31748f"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ebbcba"
+black = "#100e13"
+red = "#b87c77"
+green = "#5f8786"
+yellow = "#e19b74"
+blue = "#be9bbe"
+magenta = "#be9bbe"
+cyan = "#aed7d6"
 white = "#e0def4"
 
 [colors.bright]

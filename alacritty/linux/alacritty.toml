@@ -18,12 +18,15 @@ y = 3
 y = 3
 
 [window]
-startup_mode = "Windowed" # Maximized, Fullscreen
-decorations = "None" # Full
+startup_mode = "Windowed" # Maximized, Fullscreen, Windowed
+decorations = "None" # Full, None
 dimensions = { columns = 120, lines = 32}
 position = {x = 125, y = 55}
 dynamic_padding = false
 opacity = 0.75
+
+[mouse]
+hide_when_typing = true
 
 [cursor]
 unfocused_hollow = false
@@ -32,7 +35,7 @@ unfocused_hollow = false
 blinking = "Never"
 
 [env]
-TERM = "xterm-256color"
+TERM = "alacritty"
 
 [scrolling]
 history = 2000
