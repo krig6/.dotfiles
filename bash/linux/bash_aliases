@@ -12,8 +12,8 @@ alias ak='nv "$HOME/.config/alacritty/keybindings.toml"' #open alacritty keybind
 
 # neovim
 alias nv='nvim'
-alias nc='nv ~/.config/nvim/'                               #open neovim config
-alias color='nv ~/.config/nvim/lua/plugins/colorscheme.lua' #change neovim colorscheme
+alias nc='cd ~/.config/nvim/ && nv .'                              #open neovim config
+alias color='nv ~/.config/nvim/lua/ekodes/plugins/colorscheme.lua' #change neovim colorscheme
 
 # bash
 alias ali='nv .bash_aliases'    #open bash shortcuts
