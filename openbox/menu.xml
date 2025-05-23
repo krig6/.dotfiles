@@ -32,9 +32,14 @@
           <execute>flameshot gui</execute>
         </action>
       </item>
-      <item label="Neofetch">
+      <item label="neofetch">
         <action name="Execute">
           <execute>alacritty -e bash -c "neofetch; read -p 'Press enter to exit...'"</execute>
+        </action>
+      </item>
+      <item label="htop">
+        <action name="Execute">
+          <execute>alacritty -e bash -c "htop"</execute>
         </action>
       </item>
     </menu>
