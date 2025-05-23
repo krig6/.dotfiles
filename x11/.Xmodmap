@@ -1,6 +1,21 @@
+! Configuration for compact keyboards (without function keys)
+! Remove Caps Lock from modifier map
 remove Lock = Caps_Lock
-remove Mod1 = Escape
-keysym Caps_Lock = Escape
-keysym Escape = Caps_Lock
+
+! Map Caps Lock key (keycode 66) to Escape
+keycode 66 = Escape
+
+! Map Escape (keycode 9) to Tilde (~)
+keycode 9 = asciitilde
+
+! Map F1 (keycode 67) to Caps Lock and restore Lock modifier
+keycode 67 = Caps_Lock
 add Lock = Caps_Lock
-add Mod1 = Escape
+
+! Configuration for full-sized keyboards
+! remove Lock = Caps_Lock
+! remove Mod1 = Escape
+! keysym Caps_Lock = Escape
+! keysym Escape = Caps_Lock
+! add Lock = Caps_Lock
+! add Mod1 = Escape
