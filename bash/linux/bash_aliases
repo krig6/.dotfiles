@@ -1,26 +1,30 @@
-# project
-alias odin='cd ~/odin-restaurant && nv .' #open project with neovim
-alias proj='cd ~/odin-restaurant'         #cd to project
-
 # dotfiles
-alias dt='cd ~/.dotfiles && nv .'
+alias dt='cd ~/.dotfiles && nvim .'
 
 # alacritty
 alias ala='alacritty'
-alias ac='nv "$HOME/.config/alacritty/alacritty.toml"'   #open alacritty config
-alias ak='nv "$HOME/.config/alacritty/keybindings.toml"' #open alacritty keybindings
+alias ac='nvim "$HOME/.config/alacritty/alacritty.toml"'   #open alacritty config
+alias ak='nvim "$HOME/.config/alacritty/keybindings.toml"' #open alacritty keybindings
 
 # neovim
-alias nv='nvim'
-alias nc='cd ~/.config/nvim/ && nv .'                              #open neovim config
-alias color='nv ~/.config/nvim/lua/ekodes/plugins/colorscheme.lua' #change neovim colorscheme
+alias v='nvim .'
+alias vv='nvim'
+alias nc='cd ~/.config/nvim/ && nvim .'                              #open neovim config
+alias color='nvim ~/.config/nvim/lua/ekodes/plugins/colorscheme.lua' #change neovim colorscheme
 
 # bash
-alias ali='nv .bash_aliases'    #open bash shortcuts
+alias ali='nvim .bash_aliases'  #open bash shortcuts
 alias ar='source .bash_aliases' #refresh bash shortcuts
-alias bsh='nv ~/.bashrc'        #open bash
+alias bsh='nvim ~/.bashrc'      #open bash
 alias br='source ~/.bashrc'     #refresh bash
 alias st='startx'
+alias g='bash ~/pomo.sh'
+
+# xmodmap
+alias xr='xmodmap ~/.Xmodmap'
+
+# leet
+alias leet='cd ~/leet && nvim .'
 
 # eza
 alias lsa='eza -la'
@@ -32,8 +36,8 @@ alias gt='bash ~/.config/script/gruvbox-theme.sh && br'
 
 # tmux
 alias tm='tmux'
-alias tc='nv ~/.tmux.conf'               #open tmux config
-alias ts='nv ~/.tmux_startup.sh'         #open script
+alias tc='nvim ~/.tmux.conf'             #open tmux config
+alias ts='nvim ~/.tmux_startup.sh'       #open script
 alias tr='tmux source-file ~/.tmux.conf' #refresh tmux config
 alias tk='tm kill-session'               #tmux kill-session
 alias ta='tm a'                          #attach to tmux session
@@ -52,6 +56,7 @@ alias e='exit'
 # git
 alias gs='git status'
 alias ga='git add'
+alias gc='git commit -m'
 alias gca='git commit --amend --no-edit'
 alias gp='git push'
 alias gpl='git pull'
