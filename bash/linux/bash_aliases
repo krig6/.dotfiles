@@ -18,10 +18,14 @@ alias ar='source .bash_aliases' #refresh bash shortcuts
 alias bsh='nvim ~/.bashrc'      #open bash
 alias br='source ~/.bashrc'     #refresh bash
 alias st='startx'
-alias g='bash ~/pomo.sh'
+
+# pomodoro
+alias g='bash ~/pomodoro.sh &'
+alias pc='vv ~/pomodoro.sh'
+alias pk='pkill -f pomodoro.sh && echo "Pomodoro stopped."'
 
 # xmodmap
-alias xr='xmodmap ~/.Xmodmap'
+alias xr='xmodmap ~/.Xmodmap && echo "Custom keymappings loaded from ~/.Xmodmap."'
 
 # leet
 alias leet='cd ~/leet && nvim .'
