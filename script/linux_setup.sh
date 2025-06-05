@@ -121,6 +121,13 @@ cd i3lock-color
 wget https://raw.githubusercontent.com/betterlockscreen/betterlockscreen/main/install.sh -O - -q | sudo bash -s system
 ln -sfn ~/.dotfiles/betterlockscreen/betterlockscreenrc ~/.config/betterlockscreenrc
 
+# Create symlink for Pomodoro script
+echo "Linking Pomodoro script..."
+ln -sfn ~/.dotfiles/script/pomodoro.sh ~/pomodoro.sh
+echo "Ensuring pomodoro script is executable..."
+chmod +x ~/pomodoro.sh
+echo "Pomodoro script ready."
+
 # Making sure that tmux script is executable
 echo "Ensuring tmux startup script is executable..."
 chmod +x ~/.tmux_startup.sh
@@ -131,13 +138,12 @@ echo "Installing TPM..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "TPM installed"
 
-echo "Setup complete!"
-
 # Polybar reminder
 echo "If you're using a graphical session, you can launch Polybar manually: polybar top &"
 
 # Prompt to install Tmux plugins
 echo "Open tmux and press Prefix + I to install plugins."
 
+echo "Setup complete!"
 # Prompt to refresh source and apply changes
 echo "To apply the changes, run: source ~/.bashrc or restart your terminal."

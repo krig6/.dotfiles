@@ -119,6 +119,7 @@ sudo rm -rf ~/.dotfiles
 sudo rm -f ~/.bashrc ~/.bash_aliases
 sudo rm -f ~/.xinitrc
 sudo rm -f ~/.tmux.conf ~/.tmux_startup.sh
+sudo rm -f ~/pomodoro.sh
 echo "Dotfiles and symlinks removed."
 
 echo "Cleanup complete!"
