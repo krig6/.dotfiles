@@ -53,11 +53,6 @@ sudo rm -rf ~/.local/share/fonts/custom
 fc-cache -fv
 echo "Fonts removed."
 
-# Remove icons
-echo "Removing icons..."
-sudo rm -rf ~/.icons
-echo "Icons removed."
-
 echo "Fonts removed."
 # Remove Xmodmap
 echo "Removing Xmodmap..."

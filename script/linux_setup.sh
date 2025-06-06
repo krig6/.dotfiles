@@ -72,11 +72,6 @@ ln -sfn ~/.dotfiles/fonts ~/.local/share/fonts/custom
 fc-cache -fv
 echo "Fonts installed and cache refreshed."
 
-# Create symlink for icons directory
-echo "Linking icons directory..."
-ln -sfn ~/.dotfiles/icons/ ~/.icons
-echo "Symlink created for icons directory."
-
 # Create symlink for themes directory
 echo "Linking themes directory..."
 ln -sfn ~/.dotfiles/themes/ ~/.themes
