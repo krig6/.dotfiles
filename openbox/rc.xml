@@ -96,6 +96,18 @@
  <command>flameshot gui</command>
       </action>
     </keybind>
+      <!-- Start pomodoro -->
+    <keybind key="W-g">
+      <action name="Execute">
+        <command>bash ~/pomodoro.sh</command>
+      </action>
+    </keybind>
+      <!-- Stop pomodoro using the saved alias -->
+    <keybind key="W-S-g">
+      <action name="Execute">
+        <command>pkill -f pomodoro.sh</command>
+      </action>
+    </keybind>
     <keybind key="W-m">
       <action name="Execute">
         <command>rofi -show drun</command>
