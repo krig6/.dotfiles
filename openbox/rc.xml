@@ -89,23 +89,24 @@
   </margins>
   <keyboard>
     <keybind key="W-d">
-      <action name="ToggleShowDesktop"/>
+      <action name="ToggleShowDesktop" />
     </keybind>
     <keybind key="W-S-s">
       <action name="Execute">
- <command>flameshot gui</command>
+        <command>flameshot gui</command>
       </action>
     </keybind>
-      <!-- Start pomodoro -->
+    <!-- Start pomodoro -->
     <keybind key="W-g">
       <action name="Execute">
         <command>bash ~/pomodoro.sh</command>
       </action>
     </keybind>
-      <!-- Stop pomodoro using the saved alias -->
+    <!-- Stop pomodoro using the saved alias -->
     <keybind key="W-S-g">
       <action name="Execute">
-        <command>pkill -f pomodoro.sh</command>
+        <command>bash -c 'pkill -f "[p]omodoro.sh" &amp;&amp; notify-send --urgency=critical -t 5000
+          "Pomodoro stopped."' </command>
       </action>
     </keybind>
     <keybind key="W-m">
@@ -116,15 +117,15 @@
     <keybind key="A-Tab">
       <action name="NextWindow">
         <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
+          <action name="Focus" />
+          <action name="Raise" />
+          <action name="Unshade" />
         </finalactions>
       </action>
     </keybind>
     <!-- Window Tiling -->
     <keybind key="W-K">
-      <action name="UnmaximizeFull"/>
+      <action name="UnmaximizeFull" />
       <action name="MoveResizeTo">
         <x>center</x>
         <y>0</y>
@@ -133,7 +134,7 @@
       </action>
     </keybind>
     <keybind key="W-J">
-      <action name="UnmaximizeFull"/>
+      <action name="UnmaximizeFull" />
       <action name="MoveResizeTo">
         <x>center</x>
         <y>50%</y>
@@ -142,7 +143,7 @@
       </action>
     </keybind>
     <keybind key="W-H">
-      <action name="UnmaximizeFull"/>
+      <action name="UnmaximizeFull" />
       <action name="MoveResizeTo">
         <x>0</x>
         <y>center</y>
@@ -151,7 +152,7 @@
       </action>
     </keybind>
     <keybind key="W-L">
-      <action name="UnmaximizeFull"/>
+      <action name="UnmaximizeFull" />
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>center</y>
@@ -161,7 +162,7 @@
     </keybind>
     <!-- Corners -->
     <keybind key="W-U">
-      <action name="UnmaximizeFull"/>
+      <action name="UnmaximizeFull" />
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -171,7 +172,7 @@
     </keybind>
     <keybind key="W-O">
       <!-- PgUp -->
-      <action name="UnmaximizeFull"/>
+      <action name="UnmaximizeFull" />
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>0</y>
@@ -180,7 +181,7 @@
       </action>
     </keybind>
     <keybind key="W-I">
-      <action name="UnmaximizeFull"/>
+      <action name="UnmaximizeFull" />
       <action name="MoveResizeTo">
         <x>0</x>
         <y>50%</y>
@@ -190,7 +191,7 @@
     </keybind>
     <keybind key="W-P">
       <!-- PgDn -->
-      <action name="UnmaximizeFull"/>
+      <action name="UnmaximizeFull" />
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>50%</y>
@@ -240,13 +241,13 @@
       </action>
     </keybind>
     <keybind key="W-Return">
-      <action name="ToggleMaximizeFull"/>
+      <action name="ToggleMaximizeFull" />
     </keybind>
     <keybind key="C-S-l">
-      <action name="Close"/>
+      <action name="Close" />
     </keybind>
     <keybind key="W-BackSpace">
-      <action name="Iconify"/>
+      <action name="Iconify" />
     </keybind>
     <screen>
       <margin>
@@ -263,14 +264,14 @@
     <doubleClickTime>500</doubleClickTime>
     <context name="Frame">
       <mousebind button="A-Left" action="Drag">
-        <action name="Resize"/>
+        <action name="Resize" />
       </mousebind>
     </context>
     <context name="Client">
       <mousebind button="Left" action="Click">
-        <action name="Focus"/>
-        <action name="Raise"/>
-        <action name="Unshade"/>
+        <action name="Focus" />
+        <action name="Raise" />
+        <action name="Unshade" />
       </mousebind>
     </context>
     <context name="Root">
@@ -282,7 +283,7 @@
     </context>
     <screenEdgeWarpTime>400</screenEdgeWarpTime>
     <context name="Titlebar">
-      <mousebind button="Left" action="DoubleClick"/>
+      <mousebind button="Left" action="DoubleClick" />
     </context>
   </mouse>
   <menu>
@@ -409,7 +410,7 @@
   </applications>
   <desktops>
     <number>1</number>
-    <names/>
+    <names />
     <popupTime>875</popupTime>
   </desktops>
   <dock>
