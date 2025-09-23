@@ -20,10 +20,10 @@ y = 3
 [window]
 startup_mode = "Windowed" # Maximized, Fullscreen, Windowed
 decorations = "None" # Full, None
-dimensions = { columns = 120, lines = 32}
-position = {x = 125, y = 55}
-dynamic_padding = false
-opacity = 0.75
+dimensions = { columns = 150, lines = 40}
+position = {x =220, y = 55}
+dynamic_padding =false
+opacity = 0.90
 
 [mouse]
 hide_when_typing = true
@@ -39,4 +39,3 @@ TERM = "alacritty"
 
 [scrolling]
 history = 2000
-

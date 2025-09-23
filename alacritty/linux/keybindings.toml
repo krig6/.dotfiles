@@ -1,6 +1,5 @@
 [keyboard]
 bindings = [
-{ key = "Q", mods = "Control", command = { program = "bash", args = [ "-c", "~/.tmux_startup.sh"] } },
 { key = "V", mods = "Control", action = "Paste" },
 { key = "Plus", mods = "Control", action = "IncreaseFontSize"},
 { key = "Minus", mods = "Control", action = "DecreaseFontSize"},
