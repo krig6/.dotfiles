@@ -105,8 +105,9 @@
     <!-- Stop pomodoro using the saved alias -->
     <keybind key="W-S-g">
       <action name="Execute">
-        <command>bash -c 'pkill -f "[p]omodoro.sh" &amp;&amp; notify-send --urgency=critical -t 5000
-          "Pomodoro stopped."' </command>
+        <command>bash -c 'pkill -f "[p]omodoro.sh" &amp;&amp;
+          notify-send --urgency=critical -t 5000 "Pomodoro stopped."'
+        </command>
       </action>
     </keybind>
     <keybind key="W-m">
@@ -157,6 +158,48 @@
         <x>50%</x>
         <y>center</y>
         <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
+    <!-- like windows 11 tiling -->
+    <keybind key="W-7">
+      <action name="UnmaximizeFull" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>25%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
+    <keybind key="W-8">
+      <action name="UnmaximizeFull" />
+      <action name="MoveResizeTo">
+        <x>25%</x>
+        <y>0</y>
+        <width>25%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
+    <keybind key="W-9">
+      <action name="UnmaximizeFull" />
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0</y>
+        <width>25%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
+
+    <keybind key="W-0">
+      <action name="UnmaximizeFull" />
+      <action name="MoveResizeTo">
+        <x>75%</x>
+        <y>0</y>
+        <width>25%</width>
         <height>100%</height>
       </action>
     </keybind>
