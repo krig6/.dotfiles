@@ -146,3 +146,5 @@ fi
 parse_git_branch() {
   git rev-parse --abbrev-ref HEAD 2>/dev/null
 }
+
+export EDITOR=nvim
