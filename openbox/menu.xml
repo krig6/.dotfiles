@@ -50,6 +50,12 @@
         </action>
       </item>
 
+      <item label="Horizon">
+        <action name="Execute">
+          <execute>bash ~/.config/script/horizon-theme.sh && br</execute>
+        </action>
+      </item>
+
       <item label="Gruvbox">
         <action name="Execute">
           <execute>bash ~/.config/script/gruvbox-theme.sh && br</execute>

@@ -81,6 +81,7 @@ echo "Symlink created for themes directory."
 mkdir -p ~/.config/script
 ln -sfn ~/.dotfiles/script/rose-pine-theme.sh ~/.config/script/rose-pine-theme.sh
 ln -sfn ~/.dotfiles/script/gruvbox-theme.sh ~/.config/script/gruvbox-theme.sh
+ln -sfn ~/.dotfiles/script/horizon-theme.sh ~/.config/script/horizon-theme.sh
 
 # Create symlink for Polybar
 echo "Linking Polybar config..."
