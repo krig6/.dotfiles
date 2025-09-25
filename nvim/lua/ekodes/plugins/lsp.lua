@@ -1,6 +1,6 @@
 return {
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     opts = {
       ensure_installed = {
         "ts_ls",
@@ -9,7 +9,6 @@ return {
         "emmet_language_server",
         "jsonls",
         "lua_ls",
-        "jsonls",
         "omnisharp",
       },
     },
@@ -17,45 +16,21 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "williamboman/mason-lspconfig.nvim",
+      "mason-org/mason-lspconfig.nvim",
     },
     config = function()
       local lspconfig = require("lspconfig")
-      local mason_lspconfig = require("mason-lspconfig")
 
-      mason_lspconfig.setup_handlers({
-        -- Default handler for all servers not listed below
-        function(server_name)
-          lspconfig[server_name].setup({
-            on_attach = function(client, bufnr)
-              print(server_name .. " attached")
+      -- Minimal setups for each server
+      lspconfig.ts_ls.setup({})
+      lspconfig.cssls.setup({})
+      lspconfig.html.setup({})
+      lspconfig.emmet_language_server.setup({})
+      lspconfig.jsonls.setup({})
+      lspconfig.lua_ls.setup({})
 
-              vim.api.nvim_create_autocmd("BufWritePre", {
-                buffer = bufnr,
-                callback = function()
-                  vim.lsp.buf.format({ async = false })
-                end,
-              })
-            end,
-          })
-        end,
-
-        -- Custom setup for omnisharp
-        ["omnisharp"] = function()
-          lspconfig.omnisharp.setup({
-            cmd = { vim.fn.stdpath("data") .. "/mason/bin/OmniSharp" },
-            on_attach = function(client, bufnr)
-              print("omnisharp attached")
-
-              vim.api.nvim_create_autocmd("BufWritePre", {
-                buffer = bufnr,
-                callback = function()
-                  vim.lsp.buf.format({ async = false })
-                end,
-              })
-            end,
-          })
-        end,
+      lspconfig.omnisharp.setup({
+        cmd = { vim.fn.stdpath("data") .. "/mason/packages/omnisharp/OmniSharp" },
       })
     end,
   },
