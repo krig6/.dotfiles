@@ -10,5 +10,6 @@ return {
     vim.keymap.set("n", "gs", builtin.lsp_workspace_symbols, { desc = "Telescope lsp workspace symbols" })
     vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "Telescope lsp definition" })
     vim.keymap.set("n", "gr", builtin.lsp_references, { desc = "Telescope lsp references" })
+    -- vim.keymap.set("n", "sd", builtin.diagnostics, { desc = "Telescope lsp references" })
   end,
 }
