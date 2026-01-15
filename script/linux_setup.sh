@@ -5,7 +5,7 @@ set -e # Exit on error
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update
-sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar rofi picom openbox xinit feh flameshot thunar mousepad ripgrep imagemagick bc
+sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar rofi picom openbox xinit feh flameshot thunar mousepad ripgrep imagemagick bc dunst
 echo "Done installing base packages."
 
 # Install Brave
@@ -116,6 +116,10 @@ cd i3lock-color
 # Install betterlockscreen
 wget https://raw.githubusercontent.com/betterlockscreen/betterlockscreen/main/install.sh -O - -q | sudo bash -s system
 ln -sfn ~/.dotfiles/betterlockscreen/betterlockscreenrc ~/.config/betterlockscreenrc
+
+# Create symlink for dunst
+mkdir -p ~/.config/dunst
+ln -sfn ~/.dotfiles/dunst/dunstrc ~/.config/dunst/dunstrc
 
 # Create symlink for Pomodoro script
 echo "Linking Pomodoro script..."
