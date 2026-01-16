@@ -12,6 +12,10 @@ alias vv='nvim'
 alias nc='cd ~/.config/nvim/ && nvim .'                              #open neovim config
 alias color='nvim ~/.config/nvim/lua/ekodes/plugins/colorscheme.lua' #change neovim colorscheme
 
+# csharp
+alias createc='dotnet new console -n'
+alias runc='dotnet run'
+
 # bash
 alias ali='nvim .bash_aliases'  #open bash shortcuts
 alias ar='source .bash_aliases' #refresh bash shortcuts
@@ -37,6 +41,7 @@ alias l='eza'
 # themes
 alias rt='bash ~/.config/script/rose-pine-theme.sh && br'
 alias gt='bash ~/.config/script/gruvbox-theme.sh && br'
+alias ht='bash ~/.config/script/horizon-theme.sh && br'
 
 # tmux
 alias tm='tmux'
