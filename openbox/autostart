@@ -1,5 +1,5 @@
 # Set wallpaper
-feh --bg-scale ~/.dotfiles/wallpapers/rosepine.jpg
+feh --bg-scale ~/.dotfiles/wallpapers/horizon.jpg
 # Wallpaper
 
 # Start Polybar
@@ -22,3 +22,5 @@ xset s off           # disable screensaver
 xset s 0 0
 xset -dpms           # disable Display Power Management
 xset s noblank       # don't blank the screen
+
+brave-browser
