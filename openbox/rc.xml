@@ -21,7 +21,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>Rose-Pine</name>
+    <name>Syscrash</name>
     <titleLayout>L</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -88,21 +88,43 @@
     <right>20</right>
   </margins>
   <keyboard>
+
+<!-- ===================================================================== -->
+<!--                          CUSTOM KEYBIND CONFIG                        -->
+<!-- ===================================================================== -->
+
+    <!-- ======================= -->
+    <!-- DESKTOP CONTROLS        -->
+    <!-- ======================= -->
+
+    <!-- Show Desktop -->
     <keybind key="W-d">
-      <action name="ToggleShowDesktop" />
+      <action name="ToggleShowDesktop"/>
     </keybind>
+
+    <!-- ======================= -->
+    <!-- SCREENSHOTS             -->
+    <!-- ======================= -->
+    
+    <!-- Take a screenshot using Flameshot -->
     <keybind key="W-S-s">
       <action name="Execute">
         <command>flameshot gui</command>
       </action>
     </keybind>
-    <!-- Start pomodoro -->
+
+    <!-- ======================= -->
+    <!-- POMODORO CONTROLS       -->
+    <!-- ======================= -->
+    
+    <!-- Start Pomodoro -->
     <keybind key="W-g">
       <action name="Execute">
         <command>bash ~/pomodoro.sh</command>
       </action>
     </keybind>
-    <!-- Stop pomodoro using the saved alias -->
+
+    <!-- Stop Pomodoro -->
     <keybind key="W-S-g">
       <action name="Execute">
         <command>bash -c 'pkill -f "[p]omodoro.sh" &amp;&amp;
@@ -110,171 +132,56 @@
         </command>
       </action>
     </keybind>
-    <keybind key="W-m">
-      <action name="Execute">
-        <command>rofi -show drun</command>
-      </action>
-    </keybind>
-    <keybind key="A-Tab">
-      <action name="NextWindow">
-        <finalactions>
-          <action name="Focus" />
-          <action name="Raise" />
-          <action name="Unshade" />
-        </finalactions>
-      </action>
-    </keybind>
-    <!-- Window Tiling -->
-    <keybind key="W-K">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>center</x>
-        <y>0</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-J">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>center</x>
-        <y>50%</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-H">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>center</y>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-    <keybind key="W-L">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>center</y>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
 
-    <!-- like windows 11 tiling -->
-    <keybind key="W-7">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>25%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
+    <!-- ======================= -->
+    <!-- APPLICATION LAUNCHERS   -->
+    <!-- ======================= -->
 
-    <keybind key="W-8">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>25%</x>
-        <y>0</y>
-        <width>25%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-
-    <keybind key="W-9">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>0</y>
-        <width>25%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-
-
-    <keybind key="W-0">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>75%</x>
-        <y>0</y>
-        <width>25%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-    <!-- Corners -->
-    <keybind key="W-U">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-O">
-      <!-- PgUp -->
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-I">
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>50%</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-P">
-      <!-- PgDn -->
-      <action name="UnmaximizeFull" />
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>50%</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <!-- Launchers -->
-    <keybind key="W-E">
-      <action name="Execute">
-        <command>thunar</command>
-      </action>
-    </keybind>
-    <keybind key="A-F4">
-      <action name="Execute">
-        <command>systemctl poweroff</command>
-      </action>
-    </keybind>
-    <keybind key="A-F5">
-      <action name="Execute">
-        <command>systemctl reboot</command>
-      </action>
-    </keybind>
-    <keybind key="A-F6">
-      <action name="Execute">
-        <command>betterlockscreen -l</command>
-      </action>
-    </keybind>
-    <keybind key="W-3">
-      <action name="Execute">
-        <command>alacritty</command>
-      </action>
-    </keybind>
+    <!-- Browser (Brave) -->
     <keybind key="W-1">
       <action name="Execute">
         <command>brave-browser</command>
         <!-- or whatever browser you use -->
       </action>
     </keybind>
-    <!-- Window Controls -->
+
+    <!-- Terminal (Alacritty) -->
+    <keybind key="W-3">
+      <action name="Execute">
+        <command>alacritty</command>
+      </action>
+    </keybind>
+
+    <!-- File Manager (Thunar) -->
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>thunar</command>
+      </action>
+    </keybind>
+
+    <!-- Rofi App Launcher -->
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>rofi -show drun</command>
+      </action>
+    </keybind>
+
+    <!-- ======================= -->
+    <!-- WINDOW MANAGEMENT       -->
+    <!-- ======================= -->
+
+    <!-- Alt+Tab Window Switcher -->
+    <keybind key="A-Tab">
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+
+    <!-- Maximize / Center Window -->
     <keybind key="W-Return">
       <action name="MoveResizeTo">
         <x>center</x>
@@ -284,14 +191,217 @@
       </action>
     </keybind>
     <keybind key="W-Return">
-      <action name="ToggleMaximizeFull" />
+      <action name="ToggleMaximizeFull"/>
     </keybind>
+
+    <!-- Close Window -->
     <keybind key="C-S-l">
-      <action name="Close" />
+      <action name="Close"/>
     </keybind>
+
+    <!-- Minimize / Iconify Window -->
     <keybind key="W-BackSpace">
-      <action name="Iconify" />
+      <action name="Iconify"/>
     </keybind>
+
+    <!-- ======================= -->
+    <!-- WINDOW TILING (HALF)    -->
+    <!-- ======================= -->
+
+    <!-- Upper Vertical Split -->
+    <keybind key="W-K">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    
+    <!-- Lower Vertical Split -->
+    <keybind key="W-J">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>50%</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+
+    <!-- Left Horizontal Split -->
+    <keybind key="W-H">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>center</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
+    <!-- Right Horizontal Split -->
+    <keybind key="W-L">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>center</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
+    <!-- ======================= -->
+    <!-- WINDOW TILING (QUARTER/W11 STYLE) -->
+    <!-- ======================= -->
+
+    <!-- Leftmost column (0%–25%) -->
+    <keybind key="W-7">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>25%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    
+    <!-- Second column (25%–50%) -->
+    <keybind key="W-8">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>25%</x>
+        <y>0</y>
+        <width>25%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    
+    <!-- Third column (50%–75%) -->
+    <keybind key="W-9">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0</y>
+        <width>25%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    
+    <!-- Rightmost column (75%–100%) -->
+    <keybind key="W-0">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>75%</x>
+        <y>0</y>
+        <width>25%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    
+    <!-- =============================== -->
+    <!-- WINDOW TILING – SCREEN QUADRANTS -->
+    <!-- =============================== -->
+    
+    <!-- Top-left -->
+    <keybind key="W-U">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    
+    <!-- Top-right -->
+    <keybind key="W-O">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    
+    <!-- Bottom-left -->
+    <keybind key="W-I">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>50%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    
+    <!-- Bottom-right -->
+    <keybind key="W-P">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>50%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+
+    <!-- ======================= -->
+    <!-- SYSTEM CONTROLS         -->
+    <!-- ======================= -->
+   
+    <!-- Poweroff -->
+    <keybind key="A-F4">
+      <action name="Execute">
+        <command>systemctl poweroff</command>
+      </action>
+    </keybind>
+    
+    <!-- Reboot -->
+    <keybind key="A-F5">
+      <action name="Execute">
+        <command>systemctl reboot</command>
+      </action>
+    </keybind>
+    
+    <!-- Lock Screen -->
+    <keybind key="A-F6">
+      <action name="Execute">
+        <command>betterlockscreen -l</command>
+      </action>
+    </keybind> 
+
+    <!-- ======================= -->
+    <!-- VOLUME CONTROLS         -->
+    <!-- ======================= -->
+    
+    <!-- Mute/Unmute -->
+    <keybind key="A-m">
+      <action name="Execute">
+        <command>pactl set-sink-mute @DEFAULT_SINK@ toggle</command>
+      </action>
+    </keybind>
+    
+    <!-- Volume Up -->
+    <keybind key="A-Up">
+      <action name="Execute">
+        <command>pactl set-sink-volume @DEFAULT_SINK@ +5%</command>
+      </action>
+    </keybind>
+    
+    <!-- Volume Down -->
+    <keybind key="A-Down">
+      <action name="Execute">
+        <command>pactl set-sink-volume @DEFAULT_SINK@ -5%</command>
+      </action>
+    </keybind>
+
+<!-- ===================================================================== -->
+<!--                       END CUSTOM KEYBIND CONFIG                       -->
+<!-- ===================================================================== -->
+
     <screen>
       <margin>
         <top>10</top>
@@ -307,14 +417,14 @@
     <doubleClickTime>500</doubleClickTime>
     <context name="Frame">
       <mousebind button="A-Left" action="Drag">
-        <action name="Resize" />
+        <action name="Resize"/>
       </mousebind>
     </context>
     <context name="Client">
       <mousebind button="Left" action="Click">
-        <action name="Focus" />
-        <action name="Raise" />
-        <action name="Unshade" />
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
       </mousebind>
     </context>
     <context name="Root">
@@ -326,7 +436,7 @@
     </context>
     <screenEdgeWarpTime>400</screenEdgeWarpTime>
     <context name="Titlebar">
-      <mousebind button="Left" action="DoubleClick" />
+      <mousebind button="Left" action="DoubleClick"/>
     </context>
   </mouse>
   <menu>
@@ -453,7 +563,7 @@
   </applications>
   <desktops>
     <number>1</number>
-    <names />
+    <names/>
     <popupTime>875</popupTime>
   </desktops>
   <dock>
