@@ -12,3 +12,7 @@ vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 vim.keymap.set("n", "<C-e>", "<Cmd>e<CR>")
 
 vim.keymap.set("x", "<leader>p", '"_dP')
+
+-- Remap C-r to U
+vim.keymap.set("n", "U", "<C-r>")
+
