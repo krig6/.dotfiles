@@ -353,7 +353,7 @@
     <!-- ======================= -->
    
     <!-- Poweroff -->
-    <keybind key="A-F4">
+    <keybind key="C-A-Delete">
       <action name="Execute">
         <command>systemctl poweroff</command>
       </action>
@@ -385,14 +385,14 @@
     </keybind>
     
     <!-- Volume Up -->
-    <keybind key="A-Up">
+    <keybind key="C-Up">
       <action name="Execute">
         <command>pactl set-sink-volume @DEFAULT_SINK@ +5%</command>
       </action>
     </keybind>
     
     <!-- Volume Down -->
-    <keybind key="A-Down">
+    <keybind key="C-Down">
       <action name="Execute">
         <command>pactl set-sink-volume @DEFAULT_SINK@ -5%</command>
       </action>
