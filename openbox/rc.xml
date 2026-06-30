@@ -106,10 +106,10 @@
     <!-- SCREENSHOTS             -->
     <!-- ======================= -->
     
-    <!-- Take a screenshot using Flameshot -->
+    <!-- Take a screenshot using screenshot.sh script -->
     <keybind key="W-S-s">
       <action name="Execute">
-        <command>flameshot gui</command>
+        <command>bash ~/.dotfiles/script/screenshot.sh -s</command>
       </action>
     </keybind>
 
