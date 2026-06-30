@@ -2,11 +2,17 @@ return {
   {
     "nvim-neotest/neotest",
     dependencies = {
+      "marilari88/neotest-vitest",
       "haydenmeade/neotest-jest",
       "nvim-neotest/nvim-nio",
     },
     opts = function(_, opts)
       opts.adapters = opts.adapters or {}
+
+      -- Vitest
+      table.insert(opts.adapters, require("neotest-vitest")({}))
+
+      -- Jest
       table.insert(
         opts.adapters,
         require("neotest-jest")({
