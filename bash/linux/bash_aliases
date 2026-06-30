@@ -83,6 +83,8 @@ alias build='npm run build'   # Shortcut for npm build
 alias dev='npm run dev'       # Shortcut for npm dev
 alias lint='npm run lint'     # Shortcut for npm lint
 alias deploy='npm run deploy' # Shortcut for npm deploy
+alias test='npm run test'     # Shortcut for npm test
+alias start='npm run start'   # Shortcut for npm start
 alias install='npm install'   # Install dependencies
 alias nu='npm update'         # Update dependencies
 alias nug='npm update -g'     # Update global dependencies
@@ -95,3 +97,8 @@ alias ....='cd ../../../../'
 alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
+
+# project
+alias projdir='cd ~/odin-shopping-cart/'
+alias kode='projdir && v'
+alias devo='projdir && dev'
