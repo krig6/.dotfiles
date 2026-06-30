@@ -1,35 +1,18 @@
 return {
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
+    "zenbones-theme/zenbones.nvim",
+    dependencies = "rktjmp/lush.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require('rose-pine').setup({
-        disable_background = true,
-        styles = {
-          bold = true,
-          transparency = true,
-          italic = false,
-        },
-        palette = {
-          main = {
-            base = '#100e13',
-            surface = '#100e13',
-            overlay = '#26233a',
-            muted = '#575279',
-            subtle = '#575279',
-            text = '#cecacd',
-            love = '#b87c77',
-            gold = '#e19b74',
-            rose = '#e89b9b',
-            pine = '#5f8786',
-            foam = '#aed7d6',
-            iris = '#c4a7e7',
-          },
-        },
-      })
-      vim.cmd('colorscheme rose-pine')
+      vim.g.zenwritten = {
+        darkness = "stark",
+        italic_comments = false,
+        italic_strings = false,
+        lighten_comments = 22,
+        lighten_cursor_line = 10,
+      }
+      vim.cmd.colorscheme("zenwritten")
     end,
   },
 }
