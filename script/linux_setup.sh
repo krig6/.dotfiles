@@ -5,7 +5,7 @@ set -e # Exit on error
 # Update and install required packages
 echo "Updating system and installing essential packages..."
 sudo apt update
-sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar rofi picom openbox xinit feh flameshot thunar mousepad ripgrep imagemagick bc dunst
+sudo apt install -y xclip nodejs npm build-essential tmux curl papirus-icon-theme polybar picom openbox xinit feh thunar mousepad ripgrep imagemagick bc dunst
 echo "Done installing base packages."
 
 # Install Brave
