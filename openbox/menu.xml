@@ -27,11 +27,6 @@
           <execute>mousepad</execute>
         </action>
       </item>
-      <item label="Flameshot">
-        <action name="Execute">
-          <execute>flameshot gui</execute>
-        </action>
-      </item>
       <item label="neofetch">
         <action name="Execute">
           <execute>alacritty -e bash -c "neofetch; read -p 'Press enter to exit...'"</execute>
